@@ -1,0 +1,337 @@
+/* Body Content */
+
+body, html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.BGvideo {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.VideoAni {
+    height: 705px;
+    width: 1090px;
+    position: absolute;
+    margin-left: 450px;
+    top: -0%;
+    border: 1px solid black;
+    background-color: rgba(4, 7, 9, 0.897);
+    transition: margin-left 0.5s ease;
+}
+
+.VideoAni  video{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+#swapButton {
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    height: 30px;
+    width: 100px;
+    top: 550px;
+    right: 480px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #186F65;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    z-index: 9999;
+}
+
+
+
+/* Signin */
+
+.SigninBar {
+    height: 700px;
+    width: 450px;
+    position: absolute;
+    left: 0%;
+    top: -0%;
+    border: 1px solid black;
+    background-color: rgba(4, 7, 9, 0.897);
+    opacity: 0.9;
+    transition: left 0.5s ease;
+}
+
+.WebName1 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2.8px 1.5px #186F65;
+}
+
+.LoginFo1 h1 {
+    color: white;
+    text-align: center;
+    margin-top: 45px;
+}
+
+
+.Emailpho1 {
+    margin-top: 30px;
+    margin-left: 55px;
+    height: 40px;
+    width: 350px;
+    font-size: 15px;
+    outline-color: #186F65;
+}
+
+.Password1 {
+    margin-top: 35px;
+    margin-left: 55px;
+    height: 40px;
+    width: 350px;
+    font-size: 15px;
+    outline-color: #186F65;
+}
+
+
+#eyeball {
+    margin-left: 375px;
+    position: relative;
+    top: -35px; 
+    z-index: 2;
+    border: none;
+}
+
+
+#submit1 {
+    margin-top: 25px;
+    margin-left: 45px;
+    height: 40px;
+    width: 300px;
+    cursor: pointer;
+    background-color:#186F65;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+}
+
+.position1 {
+    margin-bottom: 500px;
+    margin-left: 25px;
+}
+
+.emailerrorone{
+    color: rgb(233, 23, 33);
+    font-size: 20px;
+    margin-left: 125px;
+    margin-top: 25px; 
+    display: inline-block;
+}
+
+.passerrorone{
+    color: rgb(233, 23, 33);
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: 15px; 
+    display: inline-block;
+}
+
+.error11 {
+    border: 2px solid red;
+}
+.slider-container {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    bottom: 180px;
+    left: 400px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .slider.on {
+    background-color: #186F65;
+  }
+  
+  .slider.on:before {
+    transform: translateX(20px);
+  }
+  
+  .slider.off:before {
+    transform: translateX(0);
+  }
+  
+  .slider input {
+    display: none;
+  }
+  body {
+    transition: background-color 0.5s ease;
+}
+
+/* Signup */
+
+.SignupBar {
+    height: 700px;
+    width: 450px;
+    position: absolute;
+    left: 100%;
+    top: -0%;
+    border: 1px solid black;
+    background-color: rgba(4, 7, 9, 0.897);
+    opacity: 0.9;
+    transition: left 0.5s ease;
+}
+
+.WebName {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2.8px 1.5px #186F65;
+}
+
+.LoginFo h1 {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Namee {
+    top: 55%;
+    margin-left: 45px;
+    height: 40px;
+    width: 350px;
+    font-size: 15px;
+    outline-color:#186F65;
+}
+
+.Emailpho {
+    margin-top: 33px;
+    margin-left: 45px;
+    height: 40px;
+    width: 350px;
+    font-size: 15px;
+    outline-color: #186F65;
+}
+
+
+.Password {
+    margin-top: 27px;
+    margin-left: 45px;
+    height: 40px;
+    width: 350px;
+    font-size: 15px;
+    outline-color:#186F65;
+}
+
+.ConfirmPassword {
+    margin-top: 10px; 
+    margin-left: 45px;
+    height: 40px;
+    width: 350px;
+    font-size: 15px;
+    outline-color: #186F65;
+}
+
+#eyeballtwo {
+    margin-left: 360px;
+    position: relative;
+    top: -35px; 
+    z-index: 2;
+    border: none;
+}
+
+
+#submit {
+    margin-top: 20px;
+    margin-left: 45px;
+    height: 40px;
+    width: 300px;
+    cursor: pointer;
+    background-color:#186F65;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.position2 {
+    margin-bottom: 500px;
+    margin-left: 25px;
+}
+
+
+.nameerror{
+    color: rgb(233, 23, 33);
+    font-size: 20px;
+    margin-left: 130px;
+    margin-top: 15px; 
+    display: inline-block;
+}
+
+.emailerror{
+    color: rgb(233, 23, 33);
+    font-size: 20px;
+    margin-left: 125px;
+    margin-top: 15px; 
+    display: inline-block;
+}
+
+.passerror{
+    color: rgb(233, 23, 33);
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: -15px; 
+    display: inline-block;
+}
+
+.conpasserror{
+    color: rgb(233, 23, 33);
+    font-size: 20px;
+    margin-left: 90px;
+    margin-top: 15px; 
+    display: inline-block;
+}
+
+.error1 {
+    border: 2px solid red;
+}
+
+.switchcli {
+    font-size: 20px;
+    color:  #186F65;
+    text-decoration: none;
+    margin-left: 127px;
+    margin-top: 30px;
+    /* margin-bottom: 40px;  */
+    display: block; /* Ensure the margin is applied correctly */
+}

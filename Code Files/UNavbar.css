@@ -1,0 +1,74 @@
+/*  */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:  #186F65;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1000; 
+    height: 85px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 20px; 
+    font-family :Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.homeli{
+    margin-left: 235px;
+}
+
+.awareli{
+    margin-left: 320px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+
+.menu a:hover {
+    background-color: rgba(19, 28, 23, 0.791);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+.user {
+    margin-left: 350px;
+}
+
+.user i {
+    margin-right: 2px;
+}
+/*  */

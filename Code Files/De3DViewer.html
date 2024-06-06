@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Image Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="UNavbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/DDSLoader.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/examples/js/exporters/GLTFExporter.js"></script>
+
+    
+    <style>
+          body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+        }
+    
+        #colorPalette {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 300%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 10; /* Ensure the color palette is above other elements */
+}
+
+        .color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 5px;
+        }
+           #textPalette {
+            margin-top: 20px;
+        }
+       
+      
+        #menubar {
+            position: absolute;
+            top: 250px;
+            right: -700px; /* Adjust the right positioning */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #menubar button {
+            margin: 5px 0; /* Add equal space between buttons */
+            padding: 15px 25px; /* Adjust padding to increase button size */
+            font-size: 24px; /*/* Adjust font size as needed */
+            background-color: rgb(6, 61, 80);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 200px; /* Set the width for consistent button size */
+            text-align: center; /* Center the button text */
+            
+        }
+
+        #menubar button:hover {
+            background-color: #335579;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 5px 0; 
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .container {
+            position: relative;
+        }
+        #imageInput {
+            position: absolute;
+            bottom: 970px; 
+            left: 800px;
+            z-index: 2; 
+            font-size: 20px;
+        }
+        #viewer {
+            width: 1800px; /* Increase the width */
+            height: 900px;
+            border: 1px solid #ccc;
+            position: relative;
+            margin-left: auto; /* Adjust the left margin */
+            right: 400px; /* Set right margin to auto */
+            z-index: 1;
+        }
+        #left-container {
+            position: absolute;
+            left: -830px;
+            top: -60px;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 20px; /* Adjust padding as needed */
+            #left-container button {
+            width: 150px; /* Adjust width as needed */
+            height: 40px;
+        }
+        }
+
+        #left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Style for the buttons in the first section */
+        .first_two button,
+        .second_two button,
+        .third_two button {
+            background-color: rgb(6, 61, 80);
+            color: white;
+            margin: 5px;
+            padding: 10px 20px; 
+            font-size: 20px; 
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 150px; /* Adjust width as needed */
+        }
+
+        .first_two button:hover,
+        .second_two button:hover,
+        .third_two button:hover {
+            background-color: #335579;
+        }
+
+        /* Style for the buttons in the fourth section */
+        .fourth_two button,
+        .fifth_two button {
+            background-color: rgb(6, 61, 80);
+            color: white;
+            margin: 5px;
+            padding: 10px 20px; 
+            font-size: 20px; 
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 150px; /* Adjust width as needed */
+        }
+
+        .fourth_two button:hover,
+        .fifth_two button:hover {
+            background-color: #335579;
+        }
+       
+        #verticalFlipButton,
+        #horizontalFlipButton{
+            padding: 15px 25px; /* Adjust padding to increase button size */
+            font-size: 24px; /* Adjust font size as needed */
+        }
+        #rotateLeftButton,
+        #rotateRightButton
+        {
+            padding: 15px 25px; /* Adjust padding to increase button size */
+            font-size: 24px;  
+        }
+        #increaseButton,
+        #decreaseButton{
+            padding: 15px 25px; /* Adjust padding to increase button size */
+            font-size: 24px;    
+        }
+        #annotationsButton,
+        #resetButton{
+            padding: 16px 25px; /* Adjust padding to increase button size */
+            font-size: 23px;  
+        }
+        .ups {
+            display: flex;
+            flex-direction: column; /* Display buttons in a column */
+            align-items: center; /* Center buttons horizontally */
+        }
+
+        #increaseTextButton,
+        #decreaseTextButton {
+            margin-bottom: 10px; /* Add some space between the buttons */
+            padding: 15px 25px; /* Adjust padding to increase button size */
+            font-size: 24px; /* Adjust font size as needed */
+        }
+        .undo-redo-buttons {
+            position: absolute;
+            top: -50px; /* Adjust the top position as needed */
+            right: 20px; /* Adjust the right position as needed */
+            z-index: 2; 
+            /* Ensure the buttons are above other elements */
+        }
+
+        .undo-redo-button {
+            padding: 15px 25px; /* Adjust padding to increase button size */
+            font-size: 24px; /* Adjust font size as needed */
+            background-color: rgb(6, 61, 80);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px; /* Add margin between the buttons */
+        }
+
+        .undo-redo-button:hover {
+            background-color: #335579;
+        }
+        #imageInput {
+    position: absolute;
+    bottom:925px ;
+left: -330px; /* Adjust this value as needed */
+font-size: 25px;
+
+}
+#annotationsBox {
+   bottom: 700px;
+    color: purple; /* Set the text color to white */
+}
+   .annotation {
+    position: absolute;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 10;
+    top: 20px;
+    left: 30px;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+            .container {
+                max-width: 100%; /* Make the container full width */
+            }
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            #left-container {
+                position: relative;
+                padding: 10px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            #imageInput {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 10px; /* Adjust bottom position */
+            }
+            #viewer {
+                width: 100%; /* Make the viewer full width */
+                height: 50vh; /* Set a fixed height or adjust as needed */
+                margin: 10px auto; /* Center the viewer horizontally with some margin */
+            }
+            #left-container {
+                position: static; /* Reset position to static */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px; /* Add padding */
+            }
+            #annotationsBox {
+    /* Add the following CSS properties */
+    position: absolute;
+    bottom: 1000px; /* Adjust the bottom position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+            #menubar {
+                position: static; /* Reset position to static */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px; /* Add padding */
+                margin-top: 10px; /* Add margin */
+            }
+            #menubar button {
+                width: 80%; /* Adjust button width */
+            }
+        }
+        .top-button {
+    background-color: rgb(6, 61, 80);
+    color: white;
+    margin: 5px;
+    padding: 20px 20px; 
+    font-size: 25px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px; /* Adjust width as needed */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image */
+
+}
+
+.top-button:hover {
+    background-color: #335579;
+}
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+        }
+        /* Your CSS */
+.button {
+    /* Add styles here to match the styling of other buttons */
+    /* For example, you can set background color, text color, padding, border, etc. */
+    background-color: rgb(6, 61, 80); /* Green */
+    border: none;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 27px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    top: 900px;
+    position: absolute;
+    left: 300px;
+}
+
+.button:hover {
+    background-color:#335579;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="navbar-brand">Enviro-Sphere</div>
+            <a class="homeli" href="DeMain.html">Home</a>
+            <a class="awareli" href="DeAware.html">Awareness</a>
+            <a class="user" href="DeAccounts.html"> Accounts</a>
+        </div>
+        <div>
+            <div id="annotationsBox">
+                <input type="text" id="annotationInput" placeholder="Enter annotation text">
+                <button id="addAnnotationButton">Add Annotation</button>
+            </div>
+            <div class="containerinput">
+               <input type="file" id="imageInput" accept=".glb,.gltf">
+               </div>
+            <div class="undo-redo-buttons">
+                <button class="undo-redo-button" onclick="undo()">Undo</button>
+                <button class="undo-redo-button" onclick="redo()">Redo</button>
+            </div>
+            <div id="viewer"></div>
+            <div id="left-container">
+                <div id="left">
+                    <button id="saveAsButton" class="button">Export</button>
+                     <div class="controls">
+                    <button id="undoColor">Undo</button>
+                    <button id="redoColor">Redo</button>
+                </div>
+
+                    <div class="button-group-top">
+                        <button class="top-button" id="undo">undo </button>
+                        <button class="top-button" id="redo">redo </button>
+                    </div>
+                    <div class="first_two"> 
+                        <button id="increaseButton">+</button>
+                        <button id="decreaseButton">-</button>
+                    </div>
+                    <div class="second_two">
+                        <button id="rotateLeftButton">Rotate Left</button>
+                        <button id="rotateRightButton">Rotate Right</button>
+                    </div>
+                    <div class="third_two">
+                        <button id="verticalFlipButton">Vertical Flip</button>
+                        <button id="horizontalFlipButton">Horizontal Flip</button>
+                    </div>
+                    <div class="fourth_two">
+                        <button id="resetColorsButton">Reset Colors</button>
+                        <button id="coloringScaleButton">Coloring Scale</button>
+                        <div id="colorPalette">
+                            <div class="color" style="background-color: #ff0000;"></div>
+                            <div class="color" style="background-color: #00ff00;"></div>
+                            <div class="color" style="background-color: #0000ff;"></div>
+                            <div class="color" style="background-color: #ffff00;"></div>
+                            <div class="color" style="background-color: #ff00ff;"></div>
+                            <div class="color" style="background-color: #ffa500;"></div>
+                            <div class="color" style="background-color: #008080;"></div>
+                            <div class="color" style="background-color: #800080;"></div>
+                            <div class="color" style="background-color: #008000;"></div>
+                            <div class="color" style="background-color: #800000;"></div>
+                            <div class="color" style="background-color: #808000;"></div>
+                            <div class="color" style="background-color: #800080;"></div>
+                            <div class="color" style="background-color: #808080;"></div>
+                            <!-- Add more color options as needed -->
+                        </div>
+                        </div>
+                </div>
+                <div class="fifth_two">
+                    <button id="annotationsButton">Annotations</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+                </div>
+                <div class="save">
+                </div>
+               
+            
+            <div id="menubar">
+                <div class="ups">
+                    
+                    <button id="increaseTextButton"onclick="changeFontSize('+')">+</button>
+                    <button id="decreaseTextButton"onclick="changeFontSize('-')">-</button>
+                </div>
+                <button onclick="resetAnnotations()">Reset</button>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleFonts()">Select Font</button>
+                    <div class="dropdown-content" id="fontOptions">
+                        <a href="#" onclick="changeFont('Arial')">Arial</a>
+                        <a href="#" onclick="changeFont('Verdana')">Verdana</a>
+                        <a href="#" onclick="changeFont('Times New Roman')">Times New Roman</a>
+                        <a href="#" onclick="changeFont('Georgia')">Georgia</a>
+                        <a href="#" onclick="changeFont('Courier New')">Courier New</a>
+                        <!-- Add more font options as needed -->
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleColors()">Select Color</button>
+                    <div class="dropdown-content" id="textPalette">
+                        <div class="color" style="background-color: #ff0000;" onclick="changeColor('#ff0000')"></div>
+                        <div class="color" style="background-color: #00ff00;" onclick="changeColor('#00ff00')"></div>
+                        <div class="color" style="background-color: #0000ff;" onclick="changeColor('#0000ff')"></div>
+                        <div class="color" style="background-color: #ffff00;" onclick="changeColor('#ffff00')"></div>
+                        <div class="color" style="background-color: #ff00ff;" onclick="changeColor('#ff00ff')"></div>
+                        <div class="color" style="background-color: #ffa500;" onclick="changeColor('#ffa500')"></div>
+                        <div class="color" style="background-color: #008080;" onclick="changeColor('#008080')"></div>
+                        <!-- Add more color options as needed -->
+                        <div class="color" style="background-color: #800080;" onclick="changeColor('#800080')"></div>
+                        <div class="color" style="background-color: #008000;" onclick="changeColor('#008000')"></div>
+                        <div class="color" style="background-color: #800000;" onclick="changeColor('#800000')"></div>
+                        <div class="color" style="background-color: #808000;" onclick="changeColor('#808000')"></div>
+                        <div class="color" style="background-color: #800080;" onclick="changeColor('#800080')"></div>
+                        <div class="color" style="background-color: #808080;" onclick="changeColor('#808080')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+ const imageInput = document.getElementById('imageInput');
+    const controls = document.getElementById('controls');
+    const annotationsButton = document.getElementById('annotationsButton');
+    const annotationsBox = document.getElementById('annotationsBox');
+    const addAnnotationButton = document.getElementById('addAnnotationButton');
+    const viewer = document.getElementById('viewer');
+    let annotations = [];
+
+
+    const saveAsButton = document.getElementById('saveAsButton');
+    const coloringScaleButton = document.getElementById('coloringScaleButton');
+    const colorPalette = document.getElementById('colorPalette');
+
+    let scene, camera, renderer, imageObject, mouseDown = false, mouseX = 0, mouseY = 0, lastMouseX = 0, lastMouseY = 0;
+    let cutoutMode = false;
+    let selectionBox;
+    let undoStack = [];
+    let redoStack = [];
+    let originalState = null;
+
+let prevState = [];
+function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, viewer.offsetWidth / viewer.offsetHeight, 0.1, 1000);
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(viewer.offsetWidth, viewer.offsetHeight);
+        viewer.appendChild(renderer.domElement);
+
+        camera.position.z = 5;
+
+        document.addEventListener('mousedown', onMouseDown, false);
+        document.addEventListener('mousemove', onMouseMove, false);
+        document.addEventListener('mouseup', onMouseUp, false);
+
+        selectionBox = new THREE.BoxHelper();
+        selectionBox.material.color.set(0x00ffff);
+        selectionBox.visible = false;
+        scene.add(selectionBox);
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+    }
+
+    function onMouseDown(event) {
+        mouseDown = true;
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    }
+
+   function onMouseMove(event) {
+    const viewerRect = viewer.getBoundingClientRect();
+    const mouseX = event.clientX - viewerRect.left;
+    const mouseY = event.clientY - viewerRect.top;
+
+    if (mouseDown && mouseX >= 0 && mouseX <= viewerRect.width && mouseY >= 0 && mouseY <= viewerRect.height) {
+        const deltaX = event.clientX - lastMouseX;
+        const deltaY = event.clientY - lastMouseY;
+        if (imageObject) {
+            imageObject.rotation.y += deltaX * 0.01; // Adjust rotation speed here
+            imageObject.rotation.x += deltaY * 0.01; // Adjust rotation speed here
+        }
+    }
+
+    lastMouseX = event.clientX;
+    lastMouseY = event.clientY;
+}
+function onMouseUp(event) {
+      mouseDown = false;
+        lastMouseX = mouseX;
+        lastMouseY = mouseY;
+    }
+init();
+animate();
+imageInput.addEventListener('change', function(event) {
+ const file = event.target.files[0];
+if (!file) return;
+const reader = new FileReader();
+ reader.onload = function(e) {
+        const url = e.target.result;
+        const loader = new THREE.GLTFLoader();
+        const dracoLoader = new THREE.DRACOLoader();
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.0/');
+        loader.setDRACOLoader(dracoLoader);
+        loader.load(url, function(gltf) {
+            scene.remove(imageObject);
+            imageObject = gltf.scene;
+            captureOriginalState(); // Capture the original state of the image
+            
+            // Center the image
+            const box = new THREE.Box3().setFromObject(imageObject);
+            const center = box.getCenter(new THREE.Vector3());
+            imageObject.position.sub(center);
+            
+            // Adjust camera position to view the image
+            const size = box.getSize(new THREE.Vector3()).length();
+            const cameraDistance = size * 0.8;
+            camera.position.copy(center);
+            camera.position.x += cameraDistance;
+            camera.position.y += cameraDistance;
+            camera.position.z += cameraDistance;
+            camera.lookAt(center);
+            
+            scene.add(imageObject);
+            addToUndoStack();
+        });
+    };
+    reader.readAsDataURL(file);
+});
+ // Add lights to the scene
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Soft white light
+scene.add(ambientLight);
+ const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // White light coming from the top-left corner
+ directionalLight.position.set(-1, 2, 4);
+scene.add(directionalLight);
+ // Increase size button functionality
+document.getElementById('increaseButton').addEventListener('click', function() {
+if (imageObject) {
+ imageObject.scale.multiplyScalar(1.1);
+  addToUndoStack();
+ }
+});
+document.getElementById('decreaseButton').addEventListener('click', function() {
+if (imageObject) {
+ imageObject.scale.multiplyScalar(0.9);
+ addToUndoStack();
+}
+});
+// buttons Fumctionalities
+// Rotation left button functionality
+    document.getElementById('rotateLeftButton').addEventListener('click', function() {
+        if (imageObject) {
+            imageObject.rotation.y -= 0.1; // Adjust rotation speed here
+            addToUndoStack();
+        }
+    });
+document.getElementById('rotateRightButton').addEventListener('click', function() {
+        if (imageObject) {
+            imageObject.rotation.y += 0.1; // Adjust rotation speed here
+            addToUndoStack();
+        }
+    });
+// Vertical flip button functionality
+document.getElementById('verticalFlipButton').addEventListener('click', function() {
+ if (imageObject) {
+imageObject.scale.y *= -1;
+addToUndoStack();
+ }
+});
+// Horizontal flip button functionality
+document.getElementById('horizontalFlipButton').addEventListener('click', function() {
+if (imageObject) {
+    imageObject.scale.x *= -1;
+ addToUndoStack();
+}});
+renderer.domElement.addEventListener('click', function(event) {
+  cloneObject(); // Call the cloneObject function when clicking on the 3D image
+ });
+// /Function to clone an object at the given intersection point
+function cloneObject() {
+    if (imageObject) {
+        const clonedObject = imageObject.clone();
+ // Set the rotation of the cloned object same as the original one
+ clonedObject.rotation.copy(imageObject.rotation);
+// Traverse through the cloned object's children to set material properties
+ clonedObject.traverse(child => {
+  if (child.isMesh) {
+child.material = child.material.clone(); // Clone the material
+child.material.side = THREE.DoubleSide; // Set material to double-sided
+  }
+});
+    
+// Add the cloned object to the scene
+scene.add(clonedObject);
+// Set the position of the cloned object relative to the camera
+        const offset = new THREE.Vector3(0, 0, -5); // Adjust offset as needed
+        clonedObject.position.copy(camera.position).add(offset);
+
+        // Add the cloned object to the undo stack
+        addToUndoStack();
+        
+        // Add cropping functionality to the cloned object
+        selectionBox.visible = true;
+        selectionBox.update(clonedObject);
+
+        // Restore original material after a short delay to remove highlight
+        setTimeout(() => {
+            clonedObject.traverse(child => {
+                if (child.isMesh) {
+                    child.material = child.material.clone();
+                    child.material.side = THREE.DoubleSide;
+                }
+            });
+        }, 2000); // Adjust the delay as needed
+    }
+}
+//Coloring Scale button functionality
+coloringScaleButton.addEventListener('click', function() {
+    if (imageObject) {
+        const colorPalette = document.getElementById('colorPalette');
+        if (colorPalette.style.display === 'block') {
+            colorPalette.style.display = 'none'; // Hide color palette if already displayed
+        } else {
+            colorPalette.style.display = 'block'; // Show color palette if not displayed
+        }
+    }
+});
+
+// Color palette functionality
+const colors = document.querySelectorAll('.color');
+
+// Add click event listener to each color option
+colors.forEach(color => {
+    color.addEventListener('click', function() {
+        if (imageObject) {
+            // Set material color of imageObject to the selected color
+            imageObject.traverse(child => {
+                if (child.isMesh) {
+                    child.material.color.set(color.style.backgroundColor);
+                }
+            });
+        }
+    });
+});
+// Color palette functionality for the image
+const imageColors = document.querySelectorAll('.image-color');
+
+// Add click event listener to each color option for the image
+imageColors.forEach(color => {
+    color.addEventListener('click', function() {
+        if (imageObject) {
+            // Set material color of imageObject to the selected color
+            imageObject.traverse(child => {
+                if (child.isMesh) {
+                    child.material.color.set(color.style.backgroundColor);
+                }
+            });
+        }
+    });
+});
+
+// Color palette functionality for text annotations
+const textColors = document.querySelectorAll('.text-color');
+
+// Add click event listener to each color option for the text annotations
+textColors.forEach(color => {
+    color.addEventListener('click', function() {
+        // Apply selected color to text annotations
+        const textElements = document.querySelectorAll('.annotation'); // Select only text annotations
+        textElements.forEach(textElement => {
+            textElement.style.color = color.style.backgroundColor;
+        });
+    });
+});
+
+
+    function cloneObject(intersection) {
+        const clonedObject = imageObject.clone();
+    clonedObject.rotation.copy(imageObject.rotation);
+    clonedObject.traverse(child => {
+        if (child.isMesh) {
+            child.material = child.material.clone();
+            child.material.side = THREE.DoubleSide;
+    } 
+});
+   
+  
+
+    // Add the cloned object to the scene
+   
+
+    // Position the cloned object at the intersection point
+    clonedObject.position.copy(intersection.point);
+
+    // Highlight the cloned object temporarily
+    const highlightMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000, transparent: true, opacity: 0.5 });
+    clonedObject.traverse(child => {
+        if (child.isMesh) {
+            child.material = highlightMaterial;
+        }
+    });
+
+    // Add the cloned object to the undo stack
+    addToUndoStack();
+
+    // Add cropping functionality to the cloned object
+    selectionBox.visible = true;
+    selectionBox.update(clonedObject);
+
+    // Restore original material after a short delay to remove highlight
+    setTimeout(() => {
+        clonedObject.traverse(child => {
+            if (child.isMesh) {
+                child.material = child.material.clone();
+                child.material.side = THREE.DoubleSide;
+            }
+        });
+    }, 2000); // Adjust the delay as needed
+}
+
+ document.getElementById('resetButton').addEventListener('click', function() {
+        resetScene();
+    });
+
+    function resetScene() {
+        if (originalState) {
+            scene.remove(imageObject);
+            imageObject.traverse((node) => {
+                if (node.isMesh) {
+                    node.geometry.dispose();
+                    node.material.dispose();
+                }
+            });
+            imageObject = originalState.clone();
+            scene.add(imageObject);
+            addToUndoStack();
+        }
+        
+        // Clearing annotations
+        annotations = [];
+        // Clearing undo and redo stacks
+        undoStack = [];
+        redoStack = [];
+     // Hiding color palette and annotations box
+        colorPalette.style.display = 'none';
+        annotationsBox.style.display = 'none';
+        // Resetting input file value to allow loading the same file again
+        imageInput.value = '';
+    }
+// Reset colors button functionality
+document.getElementById('resetColorsButton').addEventListener('click', function() {
+        resetColors();
+    });
+// Function to reset colors to the original state
+    function resetColors() {
+        if (imageObject) {
+            // Set material color of imageObject to default color or original color
+            imageObject.traverse(child => {
+                if (child.isMesh) {
+                    // You can set the default color here, for example:
+                    child.material.color.set(0xffffff); // White color
+                }
+            });
+        }
+    }
+    function captureOriginalState() {
+        originalState = imageObject.clone();
+    }
+
+
+    function addToRedoStack(action, stack) {
+    stack.push(action.clone()); // Clone the action and push it to the redo stack
+}
+// Function to add state to the undo stack
+function addToUndoStack() {
+    // Capture the current state of the image
+    const currentState = imageObject.clone();
+    // Add the current state to the undo stack
+    undoStack.push(currentState);
+}
+
+// Function to handle undo button click
+document.getElementById('undo').addEventListener('click', function() {
+    if (undoStack.length > 0) {
+        // Remove the last state change from the undo stack
+        const prevState = undoStack.pop();
+        // Set the imageObject to the previous state
+        scene.remove(imageObject);
+        imageObject.traverse((node) => {
+            if (node.isMesh) {
+                node.geometry.dispose();
+                node.material.dispose();
+            }
+        });
+        imageObject = prevState.clone();
+        scene.add(imageObject);
+        // Add the undone state to the redo stack
+        redoStack.push(prevState);
+    }
+});
+
+// Function to handle redo button click
+document.getElementById('redo').addEventListener('click', function() {
+    if (redoStack.length > 0) {
+        // Remove the last state change from the redo stack
+        const nextState = redoStack.pop();
+        // Set the imageObject to the next state
+        scene.remove(imageObject);
+        imageObject.traverse((node) => {
+            if (node.isMesh) {
+                node.geometry.dispose();
+                node.material.dispose();
+            }
+        });
+        imageObject = nextState.clone();
+        scene.add(imageObject);
+        // Add the redone state back to the undo stack
+        undoStack.push(nextState);
+    }
+});
+saveAsButton.addEventListener('click', function() {
+    if (imageObject) {
+        // Initialize the GLTF exporter
+        const exporter = new THREE.GLTFExporter();
+
+        // Export the scene
+        exporter.parse(scene, function(result) {
+            // Convert the result to a Blob
+            const blob = new Blob([result], { type: 'model/gltf+json' });
+
+            // Create a link element
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+
+            // Set the filename
+            link.download = '3d_image.glb'; // You can change the file extension as needed
+
+            // Programmatically trigger a click event on the link to prompt the download
+            link.click();
+        }, {
+            binary: true // Export as binary GLTF (GLB) format
+        });
+    }
+});
+// Function to add hover listeners to a specific annotation
+function addHoverListenersToAnnotation(annotation) {
+    annotation.addEventListener('mouseenter', startDrag);
+    annotation.addEventListener('mouseleave', endDrag);
+}
+
+// Function to start dragging the annotation
+function startDrag(event) {
+    isDragging = true;
+    offsetX = event.offsetX;
+    offsetY = event.offsetY;
+    currentAnnotation = this;
+    document.addEventListener('mousemove', moveAnnotation);
+}
+
+// Function to move the annotation
+function moveAnnotation(event) {
+    if (isDragging && currentAnnotation && isCursorOverText(event, currentAnnotation)) {
+        const viewerRect = viewer.getBoundingClientRect();
+        const newX = event.clientX - viewerRect.left - offsetX;
+        const newY = event.clientY - viewerRect.top - offsetY;
+        // Calculate the maximum allowed positions to keep the annotation within the viewer bounds
+        const maxX = viewerRect.width - currentAnnotation.offsetWidth;
+        const maxY = viewerRect.height - currentAnnotation.offsetHeight;
+        // Update the position of the annotation while ensuring it stays within the viewer bounds
+        const clampedX = Math.min(Math.max(0, newX), maxX);
+        const clampedY = Math.min(Math.max(0, newY), maxY);
+        currentAnnotation.style.left = clampedX + 'px';
+        currentAnnotation.style.top = clampedY + 'px';
+    }
+}
+
+// Function to check if the cursor is over the text element
+function isCursorOverText(event, annotation) {
+    const rect = annotation.getBoundingClientRect();
+    return (
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom
+    );
+}
+
+// Function to end dragging the annotation
+function endDrag() {
+    isDragging = false;
+    currentAnnotation = null;
+    document.removeEventListener('mousemove', moveAnnotation);
+}
+
+// Function to add an annotation
+// Function to add an annotation
+function addAnnotation() {
+    const annotationInput = document.getElementById('annotationInput');
+    const text = annotationInput.value.trim(); // Get the input text and remove leading/trailing whitespace
+    if (text !== '') { // Check if the input text is not empty
+        // Remove existing annotations before adding a new one
+        resetAnnotations();
+        
+        // Create a new annotation element
+        const annotation = document.createElement('div');
+        annotation.classList.add('annotation');
+        annotation.textContent = text;
+        annotation.style.left = '50%'; // Adjust left position as needed
+        annotation.style.top = '50%'; // Adjust top position as needed
+        annotation.style.transform = 'translate(-50%, -50%)'; // Center the annotation
+        document.getElementById('viewer').appendChild(annotation);
+        addHoverListenersToAnnotation(annotation); // Add hover listeners to the new annotation
+        annotationInput.value = ''; // Clear the input field
+    }
+}
+
+// Event listener for the addAnnotationButton
+document.getElementById('addAnnotationButton').addEventListener('click', addAnnotation);
+
+// Variable to track dragging state and current annotation being dragged
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+let currentAnnotation = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggleDropdownContent(dropdownContentId) {
+    const dropdownContent = document.getElementById(dropdownContentId);
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+    }
+}
+
+// Event listeners for dropdown buttons
+document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const dropdownContentId = this.nextElementSibling.id;
+        toggleDropdownContent(dropdownContentId);
+    });
+});
+
+// Event listener for color selection
+document.querySelectorAll('.color').forEach(color => {
+    color.addEventListener('click', function() {
+        const selectedColor = this.style.backgroundColor;
+        // Apply selected color to text annotations
+        const textElements = document.querySelectorAll('.annotation');
+        textElements.forEach(textElement => {
+            textElement.style.color = selectedColor;
+        });
+    });
+});
+
+
+// Event listener for font selection
+document.getElementById('fontFamily').addEventListener('change', function() {
+    const selectedFont = this.value;
+    // Implement font selection functionality here
+    console.log('Selected font:', selectedFont);
+});
+function changeTextSize(factor) {
+        const textElements = document.querySelectorAll('.annotation');
+        textElements.forEach(textElement => {
+            // Check if the target element is a text annotation
+            if (annotationsBox.style.display === 'block') {
+                let currentFontSize = parseFloat(window.getComputedStyle(textElement).fontSize);
+                textElement.style.fontSize = (currentFontSize * factor) + 'px'; // Adjust font size by the factor
+            }
+        });
+    }
+// Get all dropdown buttons
+const dropdownButtons = document.querySelectorAll('.dropbtn');
+
+// Add click event listener to each dropdown button
+// Function to toggle visibility of dropdown content on click
+function toggleDropdownContent(dropdownContentId) {
+    const dropdownContent = document.getElementById(dropdownContentId);
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+    }
+}
+
+// Event listeners for dropdown buttons
+document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const dropdownContentId = this.nextElementSibling.id;
+        toggleDropdownContent(dropdownContentId);
+    });
+});
+
+// Event listener for color selection
+document.querySelectorAll('.color').forEach(color => {
+    color.addEventListener('click', function() {
+        const selectedColor = this.style.backgroundColor;
+        // Apply selected color to text annotations
+        const textElements = document.querySelectorAll('.annotation'); // Select only text annotations
+        textElements.forEach(textElement => {
+            textElement.style.color = selectedColor;
+        });
+    });
+});
+
+// Event listener for font selection
+document.querySelectorAll('#fontDropdown a').forEach(font => {
+    font.addEventListener('click', function() {
+        const selectedFont = this.textContent;
+        // Implement font selection functionality here
+        console.log('Selected font:', selectedFont);
+    });
+});
+// Event listeners for text buttons in the menu bar
+function changeFontSize(change) {
+    var annotations = document.getElementsByClassName("annotation");
+    for (var i = 0; i < annotations.length; i++) {
+        var fontSize = parseFloat(window.getComputedStyle(annotations[i]).fontSize);
+        prevState.push({ element: annotations[i], property: 'font-size', value: annotations[i].style.fontSize || `${fontSize}px` });
+        fontSize += (change === '+') ? 1 : -1;
+        annotations[i].style.fontSize = fontSize + "px";
+    }
+}
+
+function changeFont(font) {
+    var annotations = document.getElementsByClassName("annotation");
+    for (var i = 0; i < annotations.length; i++) {
+        prevState.push({ element: annotations[i], property: 'font-family', value: annotations[i].style.fontFamily });
+        annotations[i].style.fontFamily = font;
+    }
+}
+
+function changeColor(color) {
+    var annotations = document.getElementsByClassName("annotation");
+    for (var i = 0; i < annotations.length; i++) {
+        prevState.push({ element: annotations[i], property: 'color', value: annotations[i].style.color });
+        annotations[i].style.color = color;
+    }
+}
+function undo() {
+    if (prevState.length > 0) {
+        const lastChange = prevState.pop();
+        lastChange.element.style[lastChange.property] = lastChange.value;
+    }
+}
+function toggleFonts() {
+    var fontOptions = document.getElementById("fontOptions");
+    if (fontOptions.style.display === "block") {
+        fontOptions.style.display = "none";
+    } else {
+        fontOptions.style.display = "block";
+    }
+}
+
+function toggleColors() {
+    var colorOptions = document.getElementById("colorOptions");
+    if (colorOptions.style.display === "block") {
+        colorOptions.style.display = "none";
+    } else {
+        colorOptions.style.display = "block";
+    }
+}
+
+function resetAnnotations() {
+    var annotations = document.getElementsByClassName("annotation");
+    while (annotations.length > 0) {
+        annotations[0].parentNode.removeChild(annotations[0]);
+    }
+}
+ // Global variable to store previous state for undo// Call resetAnnotations() when the reset button is clicked
+document.querySelector('button[onclick="resetAnnotations()"]').addEventListener('click', resetAnnotations);
+
+
+document.getElementById('redo').addEventListener('click', redo);
+
+</script>
+
+<script src="https://kit.fontawesome.com/e90df4e163.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+ 

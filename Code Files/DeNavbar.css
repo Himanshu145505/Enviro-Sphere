@@ -1,0 +1,326 @@
+body{
+    background-color : black;
+    overflow-x: hidden; /* Hide horizontal scroll bar */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Unique hover effect for navbar list items */
+header a:hover {
+    color: #14ff72cb; /* Change text color to green */
+    background: lightblue; /* Change background color to green */
+    border-radius: 2px; /* Add border-radius */
+    /* padding: 2px 0px; */
+}
+
+
+/* Remove green color effect from cart and user icon */
+.CART:hover,
+.UserICON:hover {
+    color: inherit; /* Use the default text color */
+    background: none; /* Remove background color */
+    border-radius: inherit; /* Use the default border-radius */
+}
+
+
+
+.light-mode {
+/* Light mode styles */
+background-color: white;
+color: black;
+}
+
+.dark-mode {
+/* Dark mode styles */
+background-color: black;
+color: white;
+}
+
+
+/* Lighter variant of white */
+#container a {
+color: #f0f0f0; /* Lighter white */
+}
+
+/* Change color of "Enviro Sphere" */
+#shopName {
+color: #e0e0e0; /* Lighter variant of white */
+font-family: 'Raleway', sans-serif;/* Use a different font, for example, Roboto */
+}
+
+
+/* Change color of cart icon */
+.addedToCart {
+color: #f0f0f0; /* Lighter white */
+}
+
+/* Change color of user icon */
+.userIcon {
+color: #f0f0f0; /* Lighter white */
+}
+
+#container {
+    background-color:  rgb(6, 61, 80);
+    margin-left: -198px;
+    margin-top: -25px;
+}
+
+#containerSlider
+{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+#containerSlider img
+{
+    width: 100%;
+    height: 140%;
+    text-align: center;
+    align-content: center;
+}
+@media(max-width: 732px)
+{
+    #containerSlider img
+    {
+        height: 12em;
+    }
+}
+@media(max-width: 500px)
+{
+    #containerSlider img
+    {
+        height: 10em;
+    }
+}
+
+
+.add-to-cart {
+    width: 270px;
+    margin-left: -135px;
+    height: 30px;
+    position: absolute;
+    bottom: -40px; 
+    background-color: #004d00; /* Dark green */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: green !important;
+}
+
+.add-to-cart:hover {
+background-color: #003300 !important; /* Darker green on hover */
+}
+.UserICON{
+    margin-left: 280px;
+}
+
+.CART{
+    margin-left : 230px
+}
+
+#input{
+    width : 650px;
+}
+
+#homee{
+    margin-left: -95px;
+    margin-top : -2px;
+}
+
+#Category{
+
+    margin-left : 30px;
+    margin-top: 9px
+
+}
+
+#Awareness{
+   
+    left : 5%;
+    margin-left:700px;
+    margin-top:-21px
+    
+}
+
+/* Change color of inactive dots to green */
+.slick-dots li button:before {
+
+color: white;
+}
+
+/* Change color of active dot to white */
+.slick-dots li.slick-active button:before {
+color: green;
+
+
+}
+
+
+/* Move next and previous buttons down */
+.slick-prev{
+top: 55%;
+transform: translateY(50%);
+font-size: 30px;
+left: -35px;
+}
+
+.slick-next {
+top: 55%;
+transform: translateY(50%);
+font-size: 30px;
+}
+
+#homee a,
+#Category a,
+#Awareness a {
+font-size: 17px; /* Change the value as needed */
+}
+
+/* Unique hover effect for navbar list items */
+#container a:hover {
+color: #004d00; /* Change text color to green */
+transform: scale(1.1); /* Scale the item slightly on hover */
+transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+}
+
+#input::placeholder {
+font-size: 15px; /* Adjust the font size as needed */
+}
+
+.wall-heading{
+margin-left:30px;
+color:white;
+}
+
+
+/* Light mode styles */
+.light-mode .add-to-cart {
+color: black; /* Change the color for light mode */
+}
+
+/* Dark mode styles */
+.dark-mode .add-to-cart {
+color: white; /* Change the color for dark mode */
+}
+
+/* Increase the size of next and previous buttons */
+/* Increase the size of next and previous buttons */
+.slick-prev::before,
+.slick-next::before {
+font-size: 30px !important; /* Adjust the font size as needed */
+}
+
+/* Change color of inactive dots to black in light mode */
+.light-mode .slick-dots li button:before {
+color: black;
+}
+
+/* Change color of active dot to green in light mode */
+.light-mode .slick-dots li.slick-active button:before {
+color: green;
+}
+
+
+
+/* Styles for the mode toggle button */
+#mode-toggle {
+background: none;
+border: none;
+cursor: pointer;
+}
+
+#mode-icon {
+width: 24px; /* Adjust the width and height as needed */
+height: 24px;
+}
+
+#mode-toggle {
+position: fixed; /* Fixed position */
+top: 26px; /* Distance from the top of the viewport */
+right: 14px; /* Distance from the right of the viewport */
+z-index: 1000; /* Ensure it's above other elements */
+
+}
+
+/* Change color of previous and next buttons in light mode */
+.light-mode .slick-prev::before,
+.light-mode .slick-next::before {
+color: black !important;
+}
+
+/* Change color of previous and next buttons in dark mode */
+.dark-mode .slick-prev::before,
+.dark-mode .slick-next::before {
+color: white !important;
+}
+
+/* Dropdown container */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: black;
+min-width: 140px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+left: 465px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when the dropdown-active class is applied */
+.dropdown-active .dropdown-content {
+display: block;
+}
+
+
+/* Light mode styles for dropdown container */
+.light-mode .dropdown-content {
+background-color: white; /* Set background color to white */
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Light mode styles for links inside the dropdown */
+.light-mode .dropdown-content a {
+color: black !important; /* Set default text color to black */
+}
+
+/* Change color of links on hover in light mode */
+.light-mode .dropdown-content a:hover {
+color: green !important; /* Change text color to green on hover */
+background-color: #f1f1f1;
+}
+
+/* Default color for product content */
+.product h3,
+.product p {
+color: white;
+}
+
+/* Light mode styles for product content */
+.light-mode .product h3,
+.light-mode .product p {
+color: black;
+}
+
+/* Light mode styles */
+.light-mode .wall-heading {
+color: black; /* Change the color for light mode */
+}
+
+/* Dark mode styles */
+.dark-mode .wall-heading {
+color: white; /* Change the color for dark mode */
+}
