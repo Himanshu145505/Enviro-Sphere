@@ -74,6 +74,7 @@ header a:hover{
     height: 100%;
     object-fit: cover;
 }
+/*Sliding effect and content change transition  */
 .slider .list .item .content{
     position: absolute;
     top: 20%;
@@ -86,6 +87,8 @@ header a:hover{
     color: #fff;
     text-shadow: 0 5px 10px #0004;
 }
+
+/*content styling  */
 
 .slider .list .item .content .title,
 .slider .list .item .content .type{
