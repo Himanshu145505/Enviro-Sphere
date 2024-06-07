@@ -12,8 +12,6 @@ body{
     font-size: 12px;
 }
 
-/*Navbar Links styling  */
-
 a{
     text-decoration: none;
 }
@@ -30,12 +28,16 @@ header{
     z-index: 100;
 }
 
+/*Navbar Styling  */
+
 header a{
     color: #eee;
     margin-right: 5px;
     padding: 5px 10px;
     transition: 0.2s;
 }
+
+/*Anchor Tag  */
 
 a.active{
     background: #14ff72cb;
