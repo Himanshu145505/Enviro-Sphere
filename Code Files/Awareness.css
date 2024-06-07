@@ -96,9 +96,11 @@ header a:hover{
     font-weight: bold;
     line-height: 1.3em;
 }
+/*Slider list item  */
 .slider .list .item .type{
     color: #14ff72cb;
 }
+/*next and prev button for sliding images and content  */
 .slider .list .item .button{
     display: grid;
     grid-template-columns: repeat(2, 130px);
@@ -106,6 +108,7 @@ header a:hover{
     gap: 5px;
     margin-top: 20px;
 }
+/*button styling  */
 .slider .list .item .button button{
     border: none;
     background-color: #eee;
@@ -115,11 +118,12 @@ header a:hover{
     transition: 0.4s;
     letter-spacing: 2px;
 }
-
+/* button hover effect */
 
 .slider .list .item .button button:hover{
     letter-spacing: 3px;
 }
+
 .slider .list .item .button button:nth-child(2){
     background-color: transparent;
     border: 1px solid #fff;
@@ -130,7 +134,7 @@ header a:hover{
 
 
 
-/* Thumbnail Section  */
+/* Thumbnail Section */
 .thumbnail{
     position: absolute;
     bottom: 50px;
@@ -140,6 +144,7 @@ header a:hover{
     display: flex;
     gap: 20px;
 }
+/*Thumbnail itemsstyling  */
 
 .thumbnail .item{
     width: 150px;
@@ -147,6 +152,8 @@ header a:hover{
     flex-shrink: 0;
     position: relative;
 }
+
+/*images styling  */
 
 .thumbnail .item img{
     width: 100%;
@@ -157,7 +164,7 @@ header a:hover{
 }
 
 
-/* nextPrevArrows Section  */
+/* nextPrevArrows secction  */
 .nextPrevArrows{
     position: absolute;
     top: 80%;
