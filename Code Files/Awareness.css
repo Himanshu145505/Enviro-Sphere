@@ -265,7 +265,7 @@ header a:hover{
     z-index: 100;
 }
 
-/*Thumbain Data  */
+/*Thumbnail Data  */
 
 @keyframes showThumbnail{
     from{
@@ -274,6 +274,7 @@ header a:hover{
     }
 }
 
+/*slide next thumbnail  */
 
 .slider.next .thumbnail{
     animation: effectNext .5s linear 1 forwards;
@@ -291,6 +292,8 @@ header a:hover{
 .slider.prev .list .item:nth-child(2){
     z-index: 2;
 }
+
+/*prev slide section  */
 
 .slider.prev .list .item:nth-child(2) img{
     animation: outFrame 0.5s linear 1 forwards;
@@ -310,7 +313,7 @@ header a:hover{
     }
 }
 
-
+/*Slide Thumbnail items  */
 
 .slider.prev .thumbnail .item:nth-child(1){
     overflow: hidden;
@@ -323,6 +326,8 @@ header a:hover{
 }
 
 
+/*Content , description and buttons animation and other stylings  */
+
 .slider.prev .list .item:nth-child(2) .content .title,
 .slider.prev .list .item:nth-child(2) .content .type,
 .slider.prev .list .item:nth-child(2) .content .description,
@@ -331,6 +336,8 @@ header a:hover{
     animation: contentOut 1.5s linear 1 forwards!important;
 }
 
+/* content display key frame */
+
 @keyframes contentOut{
     to{
         transform: translateY(-150px);
@@ -338,6 +345,8 @@ header a:hover{
         opacity: 0;
     }
 }
+
+/*Web Page Dimension  */
 @media screen and (max-width: 678px) {
     .slider .list .item .content{
         padding-right: 0;
