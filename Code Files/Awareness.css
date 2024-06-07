@@ -44,6 +44,8 @@ a.active{
     border-radius: 2px;
 }
 
+/*Navbar list items Hover Effect  */
+
 header a:hover{
     background: #14ff72cb;
     border-radius: 2px;
