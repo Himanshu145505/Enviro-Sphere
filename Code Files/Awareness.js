@@ -3,6 +3,7 @@ let nextBtn = document.querySelector('.next')
 // Previous Button Variable
 let prevBtn = document.querySelector('.prev')
 
+// Slide, Sliderlist, thumbnail(images),thumbnail items (content) variables
 let slider = document.querySelector('.slider')
 let sliderList = slider.querySelector('.slider .list')
 let thumbnail = document.querySelector('.slider .thumbnail')
