@@ -27,17 +27,19 @@ prevBtn.onclick = function() {
 function moveSlider(direction) {
     let sliderItems = sliderList.querySelectorAll('.item')
     let thumbnailItems = document.querySelectorAll('.thumbnail .item')
-    
+
+    // If direction arrow is nextthen forward
     if(direction === 'next'){
         sliderList.appendChild(sliderItems[0])
         thumbnail.appendChild(thumbnailItems[0])
         slider.classList.add('next')
+        // Else move backward
     } else {
         sliderList.prepend(sliderItems[sliderItems.length - 1])
         thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1])
         slider.classList.add('prev')
     }
-
+// Animation of movement and content loading
 
     slider.addEventListener('animationend', function() {
         if(direction === 'next'){
