@@ -11,17 +11,18 @@ let thumbnailItems = thumbnail.querySelectorAll('.item')
 
 thumbnail.appendChild(thumbnailItems[0])
 
-// Function for next button 
+// Next Button Function 
 nextBtn.onclick = function() {
     moveSlider('next')
 }
 
 
-// Function for prev button 
+// Previous Button Function
 prevBtn.onclick = function() {
     moveSlider('prev')
 }
 
+// Logic of Slider Moving
 
 function moveSlider(direction) {
     let sliderItems = sliderList.querySelectorAll('.item')
