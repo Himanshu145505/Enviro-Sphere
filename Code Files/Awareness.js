@@ -1,4 +1,6 @@
+// Next Button Variable
 let nextBtn = document.querySelector('.next')
+// Previous Button Variable
 let prevBtn = document.querySelector('.prev')
 
 let slider = document.querySelector('.slider')
