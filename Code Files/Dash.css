@@ -66,12 +66,13 @@ body {
 .navigation ul li.hovered {
   background-color: var(--white);
 }
+/*list Items  */
 
 .navigation ul li:nth-child(1) {
   margin-bottom: 40px;
   pointer-events: none;
 }
-
+/*anchor tags styling  */
 .navigation ul li a {
   position: relative;
   display: block;
