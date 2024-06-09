@@ -127,7 +127,7 @@ $conn->close();
                         <div class="welcome-message">Welcome <?php echo $name; ?>!</div>
                     </a>
                 </li>
-<!--Order Details  -->
+<!--Order Details fetch from DB -->
                 <li>
                     <a href="?section=orders">
                         <span class="icon">
@@ -136,7 +136,7 @@ $conn->close();
                         <span class="title">Orders</span>
                     </a>
                 </li>
-
+<!--Redirect to Mail  -->
                 <li>
                     <a href="mailto:himanshusharma24795@gmail.com">
                         <span class="icon">
