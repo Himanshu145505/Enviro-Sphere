@@ -145,7 +145,7 @@ $conn->close();
                         <span class="title">Messages</span>
                     </a>
                 </li>
-
+<!--Redirect to Mail  -->
                 <li>
                     <a href="mailto:himanshusharma24795@gmail.com">
                         <span class="icon">
@@ -154,7 +154,7 @@ $conn->close();
                         <span class="title">Help</span>
                     </a>
                 </li>
-
+<!--Security and password fetching section  -->
                 <li>
                     <a href="?section=security-pass">
                         <span class="icon">
@@ -172,7 +172,7 @@ $conn->close();
         </div>
     </div>
 
-    <!-- =========== Scripts =========  -->
+    <!-- =========== Scripts ========= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
