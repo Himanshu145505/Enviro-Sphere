@@ -105,6 +105,7 @@ $conn->close();
     <!-- =============== Navigation ================ -->
     <div class="container">
         <div class="navigation">
+<!--             Side Bar -->
             <ul>
             
 
@@ -172,7 +173,7 @@ $conn->close();
         </div>
     </div>
 
-<!--     Icons Script -->
+<!--     Icons Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
