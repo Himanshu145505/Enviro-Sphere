@@ -86,10 +86,14 @@ $conn->close();
             margin-bottom: 20px;
         }
 
+/*         Head and Data Styling */
+
         table, th, td {
             border: 1px solid #ddd;
             padding: 8px;
         }
+
+/*         Head Color */
 
         th {
             background-color: green;
