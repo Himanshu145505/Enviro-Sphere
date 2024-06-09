@@ -1,4 +1,5 @@
 <?php
+// Connection Details
 $hostname = '127.0.0.1:3308';
 $username = 'root';
 $password = '';
@@ -71,11 +72,13 @@ $conn->close();
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="Dash.css">
     <style>
+/*         Welcome Message Styling */
         .welcome-message {
             font-size: 24px;
             text-align: center;
             margin-top: 20px;
         }
+/*         Table Display Styling */
 
         table {
             width: 100%;
