@@ -110,23 +110,24 @@ $conn->close();
 
 
                 <li>
+<!--                     Redirection to Home Page -->
                     <a href="UHome.php" style="text-decoration: none;">
                         <div class="welcome-message"></div>
                     </a>
                 </li>
-
+<!-- Redirection to Home Page  -->
                 <li>
                     <a href="UHome.php" style="text-decoration: none;">
                         <div class="welcome-message">Home</div>
                     </a>
                 </li>
-
+<!--Name Fetch from DB  -->
                 <li>
                     <a href="#" style="text-decoration: none;">
                         <div class="welcome-message">Welcome <?php echo $name; ?>!</div>
                     </a>
                 </li>
-
+<!--Order Details  -->
                 <li>
                     <a href="?section=orders">
                         <span class="icon">
