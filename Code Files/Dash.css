@@ -94,10 +94,11 @@ body {
   line-height: 75px;
   text-align: center;
 }
+/* icons font size */
 .navigation ul li a .icon ion-icon {
   font-size: 1.75rem;
 }
-  
+/*   title styling */
 .navigation ul li a .title {
   position: relative;
   display: block;
@@ -122,6 +123,7 @@ body {
   box-shadow: 35px 35px 0 10px var(--white);
   pointer-events: none;
 }
+/*Hover effects  */
 .navigation ul li:hover a::after,
 .navigation ul li.hovered a::after {
   content: "";
