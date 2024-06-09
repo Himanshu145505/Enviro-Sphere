@@ -321,6 +321,7 @@ body {
   color: var(--black1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+/*Recent Order Details  */
 .details .recentOrders table tr:last-child {
   border-bottom: none;
 }
@@ -340,6 +341,7 @@ body {
 .details .recentOrders table tr td:nth-child(3) {
   text-align: center;
 }
+/*Status Styling  */
 .status.delivered {
   padding: 2px 4px;
   background: #8de02c;
@@ -389,6 +391,7 @@ body {
   border-radius: 50px;
   overflow: hidden;
 }
+
 .recentCustomers .imgBx img {
   position: absolute;
   top: 0;
