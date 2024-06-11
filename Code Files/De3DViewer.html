@@ -422,6 +422,7 @@ font-size: 25px;
             <a class="user" href="DeAccounts.html"> Accounts</a>
         </div>
         <div>
+<!--             For Adding Text Annotation -->
             <div id="annotationsBox">
                 <input type="text" id="annotationInput" placeholder="Enter annotation text">
                 <button id="addAnnotationButton">Add Annotation</button>
@@ -429,6 +430,8 @@ font-size: 25px;
             <div class="containerinput">
                <input type="file" id="imageInput" accept=".glb,.gltf">
                </div>
+
+<!--             For Undo Redo Operations -->
             <div class="undo-redo-buttons">
                 <button class="undo-redo-button" onclick="undo()">Undo</button>
                 <button class="undo-redo-button" onclick="redo()">Redo</button>
@@ -446,6 +449,8 @@ font-size: 25px;
                         <button class="top-button" id="undo">undo </button>
                         <button class="top-button" id="redo">redo </button>
                     </div>
+
+<!--                     Buttons for Increasing or Decreasing the Size of Image -->
                     <div class="first_two"> 
                         <button id="increaseButton">+</button>
                         <button id="decreaseButton">-</button>
