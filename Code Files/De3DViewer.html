@@ -575,11 +575,15 @@ font-size: 25px;
     const saveAsButton = document.getElementById('saveAsButton');
     // Color Scaling of 3D image
     const coloringScaleButton = document.getElementById('coloringScaleButton');
+    // Color Palette
     const colorPalette = document.getElementById('colorPalette');
-
+// Image Moving 
     let scene, camera, renderer, imageObject, mouseDown = false, mouseX = 0, mouseY = 0, lastMouseX = 0, lastMouseY = 0;
     let cutoutMode = false;
+    Selection Box
     let selectionBox;
+
+    // Undo and Redo Functionality
     let undoStack = [];
     let redoStack = [];
     let originalState = null;
