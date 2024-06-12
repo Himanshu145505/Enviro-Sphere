@@ -522,6 +522,7 @@ font-size: 25px;
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleFonts()">Select Font</button>
                     <div class="dropdown-content" id="fontOptions">
+                 <!--   Fonts -->
                         <a href="#" onclick="changeFont('Arial')">Arial</a>
                         <a href="#" onclick="changeFont('Verdana')">Verdana</a>
                         <a href="#" onclick="changeFont('Times New Roman')">Times New Roman</a>
@@ -566,11 +567,13 @@ font-size: 25px;
     const annotationsBox = document.getElementById('annotationsBox');
     // add annotatinon button for adding text inside canvas
     const addAnnotationButton = document.getElementById('addAnnotationButton');
+    // 3D viewer (Canvas)
     const viewer = document.getElementById('viewer');
     let annotations = [];
 
-
+// Image Saving
     const saveAsButton = document.getElementById('saveAsButton');
+    // Color Scaling of 3D image
     const coloringScaleButton = document.getElementById('coloringScaleButton');
     const colorPalette = document.getElementById('colorPalette');
 
