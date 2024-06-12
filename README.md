@@ -12,3 +12,5 @@ Here's how it works👷🏻:
 4️⃣ The creative minds at these NGOs and schools transform the waste into meaningful products. ✨🌟
 
 5️⃣ We list these products on our website, and once sold, 70% of the proceeds go back to the NGOs and schools to support child education, while the remaining 30% helps us scale this initiative. 📈💡
+
+Working Project Video Link : https://drive.google.com/drive/folders/1FthZz0snRcuMyxmFQLLSYcbQr6vS0xSJ?usp=drive_link
