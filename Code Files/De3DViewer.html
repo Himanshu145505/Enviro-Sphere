@@ -588,6 +588,8 @@ font-size: 25px;
     let redoStack = [];
     let originalState = null;
 
+    // image moving logic
+
 let prevState = [];
 function init() {
         scene = new THREE.Scene();
@@ -608,16 +610,22 @@ function init() {
         scene.add(selectionBox);
     }
 
+    // Animation
+
     function animate() {
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
     }
+
+    // Mouse down event
 
     function onMouseDown(event) {
         mouseDown = true;
         mouseX = event.clientX;
         mouseY = event.clientY;
     }
+
+    // image moving speed
 
    function onMouseMove(event) {
     const viewerRect = viewer.getBoundingClientRect();
