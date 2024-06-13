@@ -102,6 +102,8 @@ header a:hover {
             padding-top: 100px;
             box-sizing: border-box;
         }
+
+/*Slider Image Container */
         #containerSlider img
         {
             width: 100%;
@@ -109,6 +111,8 @@ header a:hover {
             text-align: center;
             align-content: center;
         }
+
+/*         Styling for Responsiveness */
         @media(max-width: 732px)
         {
             #containerSlider img
@@ -124,13 +128,14 @@ header a:hover {
             }
         }
 
-        /* PRODUCT STYLES */
+        /* Product Position and Display Setting */
         #products {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 20px;
         }
+/*    Product Styling      */
 
         .product {
             width: 255px;
