@@ -174,7 +174,7 @@ header a:hover {
     transform: scale(1.1);
 }
 
-
+/*    Product Button Styling */
         .product button {
             margin-top: 10px;
             padding: 5px 10px;
@@ -185,15 +185,18 @@ header a:hover {
             cursor: pointer;
         }
 
+/*         Hover Effect */
+
         .product button:hover {
             background-color: #0056b3;
         }
-
+/*Product Details  */
         .product-info {
             text-align: center;
             position: relative;
             top: -10px; 
         }
+/*         Add to Card Button Styling */
 
         .add-to-cart {
             width: 270px;
