@@ -151,10 +151,14 @@ header a:hover {
             
         }
 
+/*         Product Card Hover */
+
         .product:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
+
+/*         Product Image Styling */
 
         .product img {
     width: 100%;
@@ -163,6 +167,8 @@ header a:hover {
     object-fit: cover;
     transition: transform 0.3s;
 }
+
+/*         Image effect hover */
 
 .product:hover img {
     transform: scale(1.1);
