@@ -30,7 +30,7 @@
     <style>
 
         body{
-/*             Background Styling */
+               /*Background Styling */
             background-color : black;
             overflow-x: hidden; /* Hide horizontal scroll bar */
             transition: background-color 0.3s, color 0.3s;
@@ -51,12 +51,14 @@ header a:hover {
     border-radius: inherit; /* Use the default border-radius */
 }
 
-
+/* Light Mode Styling  */
         .light-mode {
     /* Light mode styles */
     background-color: white;
     color: black;
 }
+
+/*Dark Mode Styling */
 
 .dark-mode {
     /* Dark mode styles */
