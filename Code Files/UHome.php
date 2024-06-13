@@ -36,15 +36,14 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-/* Unique hover effect for navbar list items */
+/* Unique hover effect for navbar list */
 header a:hover {
-    color: #14ff72cb; /* Change text color to green */
-    background: #14ff72cb; /* Change background color to green */
+    color: #14ff72cb; /* Changes text color to green */
+    background: #14ff72cb; /* Changes background color to green */
     border-radius: 2px; /* Add border-radius */
 }
 
-
-/* Remove green color effect from cart and user icon */
+/*Cart and My Accounts Section  */
 .CART:hover,
 .UserICON:hover {
     color: inherit; /* Use the default text color */
