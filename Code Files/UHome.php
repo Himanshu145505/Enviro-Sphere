@@ -212,25 +212,30 @@ header a:hover {
             background-color: green !important;
         }
 
+/*         Hover effect of button */
+
         .add-to-cart:hover {
     background-color: #003300 !important; /* Darker green on hover */
 }
+/*     My Accounts Section Positioning */
         .UserICON{
             margin-left: -10px;
         }
-
+/*Card Positioning  */
         .CART{
             margin-left : 8px
         }
-
+/*Search Box  */
         #input{
             width : 650px;
         }
-
+/*home styling  */
         #homee{
             margin-left: -95px;
             margin-top : 8px;
         }
+
+/*         Category Section */
 
         #Category{
 
