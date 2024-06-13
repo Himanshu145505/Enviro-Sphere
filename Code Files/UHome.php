@@ -73,6 +73,7 @@ header a:hover {
 }
 
 /* Change color of "Enviro Sphere" */
+/*         Color Change for modes */
 #shopName {
     color: #e0e0e0; /* Lighter variant of white */
     font-family: 'Raleway', sans-serif;/* Use a different font, for example, Roboto */
@@ -88,11 +89,11 @@ header a:hover {
     .userIcon {
     color: #f0f0f0; /* Lighter white */
 }
-
+/*Background Color  */
         #container {
             background-color: #186F65;
         }
-
+/*Image Slider Container Styling  */
         #containerSlider
         {
             margin: auto;
