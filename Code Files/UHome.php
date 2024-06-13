@@ -30,6 +30,7 @@
     <style>
 
         body{
+/*             Background Styling */
             background-color : black;
             overflow-x: hidden; /* Hide horizontal scroll bar */
             transition: background-color 0.3s, color 0.3s;
