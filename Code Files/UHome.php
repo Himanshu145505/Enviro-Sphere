@@ -261,6 +261,7 @@ header a:hover {
 }
 
 /* Change color of active dot to white */
+/*         Dots Before After Styling */
 .slick-dots li.slick-active button:before {
     color: green;
 
@@ -269,6 +270,7 @@ header a:hover {
 
 
 /* Move next and previous buttons down */
+/*         Prev Slider */
 .slick-prev{
     top: 55%;
     transform: translateY(50%);
@@ -276,12 +278,15 @@ header a:hover {
     left: -35px;
 }
 
+/*         Next Slider */
+
 .slick-next {
     top: 55%;
     transform: translateY(50%);
     font-size: 30px;
 }
 
+/*         Navbar anchor styling */
 #homee a,
 #Category a,
 #Awareness a {
@@ -367,6 +372,7 @@ header a:hover {
 }
 
 /* Dropdown container */
+/*         Category DropDown Styling */
 .dropdown-content {
     display: none;
     position: absolute;
