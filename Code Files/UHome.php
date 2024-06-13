@@ -229,7 +229,7 @@ header a:hover {
         #input{
             width : 650px;
         }
-/*home styling  */
+/*Home Styling  */
         #homee{
             margin-left: -95px;
             margin-top : 8px;
@@ -244,6 +244,8 @@ header a:hover {
 
         }
 
+/*         Awareness Button Styling */
+
         #Awareness{
             margin-top: -22px;
             left : 5%;
@@ -252,6 +254,7 @@ header a:hover {
         }
 
  /* Change color of inactive dots to green */
+/*         Slider Dots Styling */
 .slick-dots li button:before {
     
     color: white;
