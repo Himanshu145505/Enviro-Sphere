@@ -3,6 +3,8 @@
 <head>
     <title>UPI Payment</title>
     <style>
+
+/*         Background Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,6 +15,7 @@
             align-items: center;
             height: 100vh;
         }
+/*         UPI QR Container */
         .container {
             max-width: 400px;
             padding: 20px;
@@ -21,6 +24,7 @@
             border-radius: 10px;
             text-align: center;
         }
+/*         Heading 1 (UPI) */
         h1 {
             color: #333;
             margin-bottom: 20px;
