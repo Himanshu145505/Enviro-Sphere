@@ -8,7 +8,7 @@
     padding: 15px;
 }
 
-
+/*Navbar Styling  */
 .menu {
     position: fixed;
     top: 0;
@@ -22,7 +22,7 @@
     z-index: 1000; 
     height: 85px;
 }
-
+/*Enviro Sphere Styling  */
 .navbar-brand {
     color: #fff;
     font-size: 30px;
@@ -30,7 +30,7 @@
     font-family :Georgia, 'Times New Roman', Times, serif;
 }
 
-
+/*Home Alignments  */
 .homeli{
     margin-left: 235px;
 }
