@@ -605,7 +605,6 @@ header a:hover {
 <!-- Products Section  -->
 <h1 class="wall-heading">Explore The Ultimate Range of Enviro Sphere...</h1>
 
-<!-- PRODUCT SECTION -->
 <div id="products">
     <?php
     // Database connection details
@@ -661,7 +660,7 @@ header a:hover {
     $conn->close();
     ?>
 </div>
-
+<!--Cart  -->
 <div id="cart" style="display: none;">
     <h2>Cart</h2>
     <ul id="cart-items"></ul>
@@ -670,6 +669,7 @@ header a:hover {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script>
+    // Slider Slide Show
     $(document).ready(function() {
         $('#containerSlider').slick({
             dots: true,
@@ -683,6 +683,7 @@ header a:hover {
 </script>
 
 <script>
+    // Produxt Display
     $(document).ready(function() {
         $('.add-to-cart').on('click', function() {
             var form = $(this).closest('.add-to-cart-form');
@@ -694,6 +695,7 @@ header a:hover {
 
             // Send the data to addToCart.php using AJAX
             $.ajax({
+                // Details added to cart
                 url: 'addToCart.php',
                 type: 'POST',
                 data: { id: id, name: name, description: description, price: price, image: image },
