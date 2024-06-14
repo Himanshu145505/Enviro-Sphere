@@ -711,7 +711,7 @@ header a:hover {
         });
     });
 
-
+// Function for Filtering the Products
     function filterProducts() {
     var input, filter, products, product, name, description, i, txtValueName, txtValueDesc;
     input = document.getElementById("input");
@@ -731,7 +731,7 @@ header a:hover {
         }
     }
 }
-
+// The website theme will change on the basis of current colors if light then dark if dark then light after clicking
 document.getElementById("mode-toggle").addEventListener("click", function() {
     var body = document.body;
     var currentMode = body.classList.contains("light-mode") ? "light" : "dark";
@@ -748,6 +748,8 @@ document.getElementById("mode-toggle").addEventListener("click", function() {
         document.getElementById("mode-icon").src = "Cont/brightness.png"; // Update path to sun icon
     }
 });
+
+    // Category Dropdown
 
 document.getElementById("Category").addEventListener("mouseenter", function() {
     this.classList.add("dropdown-active");
