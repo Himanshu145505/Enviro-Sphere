@@ -584,11 +584,15 @@ header a:hover {
 <!--     Dark / Light Mode Swith Button -->
 <button class="DLMode" id="mode-toggle"><img id="mode-icon" src="Cont/brightness.png" alt="Mode"></button>
 
+
+<!--     Upload Button -->
 <button type="submit" name="btn_upload" class="uploadbutt" id="upload-button">
     <img src="Cont/photo.png" alt="Camera" style="width: 40px; height: 40px;">
 </button>
 
-<script>
+
+    <script>
+        // Upload button Redirection
     document.getElementById("upload-button").addEventListener("click", function() {
         window.location.href = "Userupload.php";
     });
@@ -598,7 +602,7 @@ header a:hover {
 
 
 
-
+<!-- Products Section  -->
 <h1 class="wall-heading">Explore The Ultimate Range of Enviro Sphere...</h1>
 
 <!-- PRODUCT SECTION -->
