@@ -762,7 +762,7 @@ document.getElementById("Category").addEventListener("mouseleave", function() {
 
 
 
-
+// Filter Products based on the click
 document.addEventListener("DOMContentLoaded", function() {
     // Function to filter products based on the clicked category
     function filterProductsByCategory(category) {
@@ -783,6 +783,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Event listener for category links
     var categoryLinks = document.querySelectorAll("#Category .dropdown-content a");
     categoryLinks.forEach(function(link) {
+        // Display product based on the category
         link.addEventListener("click", function(event) {
             event.preventDefault(); // Prevent default link behavior
             var category = this.textContent.trim(); // Get the clicked category
