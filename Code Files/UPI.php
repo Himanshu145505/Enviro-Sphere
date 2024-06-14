@@ -73,13 +73,17 @@
 </head>
 <body>
     <div class="container">
+<!--         UPI Payment Heading -->
         <h1>UPI Payment</h1>
         <div class="qr-code">
+<!--             QR Image  -->
             <img src="Cont/UPIqr.jpeg" alt="QR Code">
         </div>
+<!--         Headings and Notes -->
         <p>Scan the QR code above or use the UPI ID for payment.</p>
         <p><strong>UPI ID:</strong> enviro_sphere@yesbank</p>
         <p class="note">Note: Please ensure that you are making the payment to the correct UPI ID.</p>
+<!--         Redirection to Homepage -->
         <a href="UHome.php" class="cta-button">Back to Home</a>
     </div>
 </body>
