@@ -47,11 +47,14 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+
+/*         Imp message styling */
         .note {
             color: #999;
             font-size: 0.9em;
             margin-top: 20px;
         }
+/*         Back to home page button */
         .cta-button {
             display: inline-block;
             padding: 10px 20px;
@@ -61,6 +64,8 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
+/*         back to homepage button hover */
         .cta-button:hover {
             background-color: #0056b3;
         }
