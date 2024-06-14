@@ -580,6 +580,8 @@ header a:hover {
     </div>
 </section>
 
+
+<!--     Dark / Light Mode Swith Button -->
 <button class="DLMode" id="mode-toggle"><img id="mode-icon" src="Cont/brightness.png" alt="Mode"></button>
 
 <button type="submit" name="btn_upload" class="uploadbutt" id="upload-button">
