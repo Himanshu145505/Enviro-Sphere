@@ -30,16 +30,17 @@
     font-family :Georgia, 'Times New Roman', Times, serif;
 }
 
-/*Home Alignments  */
+/*Home positioning  */
 .homeli{
     margin-left: 235px;
 }
 
+/* awareness option positioning */
 .awareli{
     margin-left: 320px;
 }
 
-
+/*Navbar Options Styling  */
 .menu a {
     text-decoration: none;
     color: #fff;
@@ -50,9 +51,12 @@
     
 }
 
+/*Navbar Options Hover  */
+
 .menu a:hover {
     background-color: rgba(19, 28, 23, 0.791);
 }
+
 
 body {
     font-family: Arial, sans-serif;
@@ -63,6 +67,8 @@ body {
     overflow-x: hidden;
     padding-top: 50px;
 }
+
+/*user (My Accounts) icon  positioning */
 
 .user {
     margin-left: 350px;
