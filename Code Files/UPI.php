@@ -29,14 +29,19 @@
             color: #333;
             margin-bottom: 20px;
         }
+
+/*         QR code Positioning */
         .qr-code {
             margin-bottom: 20px;
         }
+
+/*         QR image styling */
         img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
+/*         other stylings */
         p {
             color: #666;
             font-size: 1.2em;
