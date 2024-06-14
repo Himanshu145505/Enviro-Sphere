@@ -528,6 +528,8 @@ header a:hover {
             <div id="collection">
                 <div id="homee"><a href="UHome.php">Home</a></div>
                 <div id="Category">
+
+<!--Category Section -->
     <a href="#">Category</a>
     <div class="dropdown-content">
         <a href="#">Wall Hangings</a>
@@ -544,6 +546,8 @@ header a:hover {
         <a href="#">Furniture</a>
     </div>
 </div>
+
+<!--Awareness Section -->
 
                 <div id="Awareness"><a href="Awareness.html">Awareness</a></div>
                 </div>
@@ -566,6 +570,8 @@ header a:hover {
 </header>
 
 <section>
+
+<!--     Slider Images -->
     <div id="containerSlider">
         <div id="slidingImage"> <img src="Cont/img1.webp" alt="image1"> </div>
         <div id="slidingImage"> <img src="Cont/img2.webp" alt="image2"> </div>
