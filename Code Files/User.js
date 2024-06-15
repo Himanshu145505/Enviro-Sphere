@@ -45,17 +45,21 @@ function signupFormValidate() {
         }
     }
 
+    // Name Empty Message
+
     if (name.value == "") {
         document.getElementById("signupnameerror").innerHTML = "Name cannot be empty";
         name.classList.add("error1");
         isSubmit = false;
     }
+// Password Empty Message
 
     if (password.value == "") {
         document.getElementById("signuppasserror").innerHTML = "Password cannot be empty";
         password.classList.add("error1");
         isSubmit = false;
     }
+// Confirm Passwordss Empty Message
 
     if (confirmPassword.value == "") {
         document.getElementById("signupconfirmpasserror").innerHTML = "Confirm Password cannot be empty";
