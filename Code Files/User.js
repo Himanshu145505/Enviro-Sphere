@@ -131,11 +131,12 @@ document.getElementById("SignupFo").addEventListener("submit", function(event) {
         event.preventDefault(); 
     }
 });
-
+// Show Password EyeBall for Sign Up
 document.getElementById("eyeball").addEventListener("click", function() {
     togglePasswordVisibility('signin');
 });
 
+// Show password eyeball for Sign In
 document.getElementById("eyeballtwo").addEventListener("click", function() {
     togglePasswordVisibility('signup');
 });
