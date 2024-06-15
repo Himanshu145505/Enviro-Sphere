@@ -78,6 +78,7 @@ function signupFormValidate() {
 }
 // Validation Check for Sign In Page
 function signinFormValidate() {
+    // Variables Declare
     var email = document.getElementById("Email1");
     var password = document.getElementById("Password1");
     var isSubmit = true;
@@ -87,6 +88,8 @@ function signinFormValidate() {
 
     email.classList.remove("error11");
     password.classList.remove("error11");
+
+    // IF Email is empty
 
     if (email.value == "") {
         document.getElementById("emailerrorone").innerHTML = "This field cannot be empty";
