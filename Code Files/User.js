@@ -95,13 +95,17 @@ function signinFormValidate() {
         document.getElementById("emailerrorone").innerHTML = "This field cannot be empty";
         email.classList.add("error11");
         isSubmit = false;
-    } else {
+    }  
+        // If email format is not correct
+    else {
         if (!email.value.includes("@") && isNaN(email.value)) {
             document.getElementById("emailerrorone").innerHTML = "Invalid email or Phone";
             email.classList.add("error11");
             isSubmit = false;
         }
     }
+
+    // if password is emplt
 
     if (password.value == "") {
         document.getElementById("passerrorone").innerHTML = "Password cannot be empty";
