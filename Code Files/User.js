@@ -1,5 +1,6 @@
 
 // JS Validations
+// Validations for SIgn Up Page
 function signupFormValidate() {
     var text = document.getElementById("email1");
     var name = document.getElementById("Name");
@@ -75,7 +76,7 @@ function signupFormValidate() {
 
     return isSubmit;
 }
-
+// Validation Check for Sign In Page
 function signinFormValidate() {
     var email = document.getElementById("Email1");
     var password = document.getElementById("Password1");
