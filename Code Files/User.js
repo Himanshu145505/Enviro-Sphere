@@ -199,6 +199,10 @@ function togglePasswordVisibility(formType) {
     }
 }
 
+// Redirections
+
+// Redirection for User and Designer
+
 document.addEventListener("DOMContentLoaded", function() {
     var toggle = document.getElementById("toggle");
 
