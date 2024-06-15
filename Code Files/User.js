@@ -59,7 +59,7 @@ function signupFormValidate() {
         password.classList.add("error1");
         isSubmit = false;
     }
-// Confirm Passwordss Empty Message
+// Confirm Password Empty Message
 
     if (confirmPassword.value == "") {
         document.getElementById("signupconfirmpasserror").innerHTML = "Confirm Password cannot be empty";
