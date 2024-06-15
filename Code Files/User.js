@@ -105,7 +105,7 @@ function signinFormValidate() {
         }
     }
 
-    // if password is emplt
+    // if password is empty
 
     if (password.value == "") {
         document.getElementById("passerrorone").innerHTML = "Password cannot be empty";
@@ -116,11 +116,15 @@ function signinFormValidate() {
     return isSubmit;
 }
 
+// Submit Button Sign In Check
+
 document.getElementById("SignInFo").addEventListener("submit", function(event) {
     if (!signinFormValidate()) {
         event.preventDefault(); 
     }
 });
+
+// Submit Button Sign Up Check
 
 document.getElementById("SignupFo").addEventListener("submit", function(event) {
     if (!signupFormValidate()) {
