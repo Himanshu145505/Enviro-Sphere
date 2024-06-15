@@ -65,6 +65,8 @@ function signupFormValidate() {
         document.getElementById("signupconfirmpasserror").innerHTML = "Confirm Password cannot be empty";
         confirmPassword.classList.add("error1");
         isSubmit = false;
+
+        // Password and confirm password match validation check
     } else if (password.value !== confirmPassword.value) {
         document.getElementById("signupconfirmpasserror").innerHTML = "Passwords do not match";
         confirmPassword.classList.add("error1");
