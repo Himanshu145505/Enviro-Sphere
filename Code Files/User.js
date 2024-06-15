@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
     toggle.addEventListener("change", function() {
         if (this.checked) {
             // Redirect to 'Designer.php' when toggle is on
+            // When Accessed Through Designer Bar
             window.location.href = "Designer.php";
         } else {
             // Redirect to 'user.php' when toggle is off
