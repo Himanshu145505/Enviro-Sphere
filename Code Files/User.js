@@ -1,3 +1,5 @@
+
+// JS Validations
 function signupFormValidate() {
     var text = document.getElementById("email1");
     var name = document.getElementById("Name");
@@ -15,6 +17,7 @@ function signupFormValidate() {
     password.classList.remove("error1");
     confirmPassword.classList.remove("error1");
 
+    // If name is emply show error
     if (text.value == "") {
         document.getElementById("signupemailerror").innerHTML = "This field cannot be empty";
         text.classList.add("error1");
