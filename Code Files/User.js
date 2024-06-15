@@ -17,12 +17,15 @@ function signupFormValidate() {
     password.classList.remove("error1");
     confirmPassword.classList.remove("error1");
 
-    // If name is emply show error
+    // If the field is emply show error
     if (text.value == "") {
         document.getElementById("signupemailerror").innerHTML = "This field cannot be empty";
         text.classList.add("error1");
         isSubmit = false;
-    } else {
+
+    } 
+    // If email format is not correct show error
+    else {
         if (text.value.includes("@")) {
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(text.value)) {
@@ -30,7 +33,9 @@ function signupFormValidate() {
                 text.classList.add("error1");
                 isSubmit = false;
             }
-        } else {
+        } 
+        // Email and Phone Validation
+        else {
             var phoneRegex = /^[0-9]{10}$/;
             if (!phoneRegex.test(text.value)) {
                 document.getElementById("signupemailerror").innerHTML = "Invalid email or Phone ";
