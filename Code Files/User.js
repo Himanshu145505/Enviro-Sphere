@@ -141,6 +141,8 @@ document.getElementById("eyeballtwo").addEventListener("click", function() {
     togglePasswordVisibility('signup');
 });
 
+// Sign In and Sign Up Swap Buttons
+
 document.getElementById("swapButton").addEventListener("click", function() {
     const signinBar = document.querySelector('.SigninBar');
     const signupBar = document.querySelector('.SignupBar');
