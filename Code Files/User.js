@@ -213,6 +213,7 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "Designer.php";
         } else {
             // Redirect to 'user.php' when toggle is off
+            // When Accessed Through User Bar
             window.location.href = "user.php";
         }
     });
