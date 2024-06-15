@@ -153,6 +153,8 @@ document.getElementById("swapButton").addEventListener("click", function() {
     const signupBarRect = signupBar.getBoundingClientRect();
     const videoAniRect = videoAni.getBoundingClientRect();
 
+    // Sign In and Sign Up Swapping
+
     if (this.textContent === "Sign Up") {
 
         videoAni.style.marginLeft = '0';
@@ -184,6 +186,8 @@ document.getElementById("swapButton").addEventListener("click", function() {
         this.style.left = '870px';
     }
 });
+
+// Show Password Function
 
 function togglePasswordVisibility(formType) {
     var passwordInput = document.getElementById(formType === 'signup' ? "password1" : "Password1");
