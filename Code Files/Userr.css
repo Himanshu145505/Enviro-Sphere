@@ -284,7 +284,7 @@ object-fit: cover;
     font-size: 15px;
     outline-color: #186F65;
 }
-
+/*Show password eyeball for Sign up page  */
 #eyeballtwo {
     margin-left: 360px;
     position: relative;
@@ -293,7 +293,7 @@ object-fit: cover;
     border: none;
 }
 
-
+/*Submit Button for Sign Up  */
 #submit {
     margin-top: 20px;
     margin-left: 45px;
@@ -306,7 +306,7 @@ object-fit: cover;
     color: white;
 }
 
-
+/*Sign up bar positioning  */
 .position2 {
     margin-bottom: 500px;
     margin-left: 25px;
