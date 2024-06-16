@@ -1,11 +1,15 @@
 /* Body Content */
 
+
+/*Background Styling  */
 body, html {
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
+
+/*Background Video  */
 .BGvideo {
     position: relative;
     width: 100vw;
@@ -13,7 +17,7 @@ body, html {
     overflow: hidden;
 }
 
-
+/*Video Animation Container  */
 .VideoAni {
     height: 705px;
     width: 1090px;
@@ -25,12 +29,15 @@ body, html {
     transition: margin-left 0.5s ease;
 }
 
+/*Video Styling  */
 .VideoAni  video{
 height: 100%;
 width: 100%;
 object-fit: cover;
 }
 
+
+/*Swap Button Styling  */
 #swapButton {
     position: absolute;
     text-align: center;
@@ -52,6 +59,8 @@ object-fit: cover;
 
 /* Signin */
 
+/*SignIn Bar Styling  */
+
 .SigninBar {
     height: 700px;
     width: 450px;
@@ -63,6 +72,8 @@ object-fit: cover;
     opacity: 0.9;
     transition: left 0.5s ease;
 }
+
+/*Website Name Styling  */
 
 .WebName1 {
     font-size: 50px;
