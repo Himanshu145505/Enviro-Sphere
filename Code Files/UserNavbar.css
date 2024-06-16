@@ -115,21 +115,27 @@ color: #f0f0f0; /* Lighter white */
     background-color: green !important;
 }
 
+/*Add to Cart Hover effect  */
 .add-to-cart:hover {
 background-color: #003300 !important; /* Darker green on hover */
 }
+
+/*User Icon Styling  */
 .UserICON{
     margin-left: 160px;
 }
 
+/*Cart Styling  */
 .CART{
     margin-left : 230px
 }
 
+/*Input Styling  */
 #input{
     width : 650px;
 }
 
+/*home achor styling  */
 #homee{
     margin-left: -95px;
     margin-top : -2px;
