@@ -67,9 +67,13 @@
                 <input type="text" name="Email" id="email1" class="Emailpho" placeholder="Email or Phone">
                 <span id="signupemailerror" class="emailerror"></span>
 
+<!--                 Password Input -->
+
                 <input type="password" name="Password" id="password1" class="Password" placeholder="Password">
                 <button id="eyeballtwo" type="button"><img src="Cont/eyeball.png" height="20px" width="20px"></button>
                 <span id="signuppasserror" class="passerror"></span>
+
+<!--                 Confirm Password Input -->
 
                 <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="ConfirmPassword" placeholder="Confirm Password">
                 <span id="signupconfirmpasserror" class="conpasserror"></span>
@@ -81,6 +85,8 @@
             </form>
         </div>
     </div>
+
+<!--     Right Div(Swipe) Video -->
 
     <div class="VideoAni">
         <video style="width: 100%;" autoplay loop muted>
