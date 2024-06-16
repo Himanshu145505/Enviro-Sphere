@@ -166,6 +166,8 @@ font-size: 30px;
 left: -35px;
 }
 
+/*Mode transform  */
+
 .slick-next {
 top: 55%;
 transform: translateY(50%);
@@ -230,6 +232,8 @@ background: none;
 border: none;
 cursor: pointer;
 }
+
+/*Dark and Light Mode icon Styling  */
 
 #mode-icon {
 width: 24px; /* Adjust the width and height as needed */
