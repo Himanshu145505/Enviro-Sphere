@@ -5,12 +5,15 @@
     <link rel="stylesheet" href="Userr.css">
 </head>
 <body>
+<!--     Sign Up Bar -->
     <div id="swapButton">Sign Up</div>
+<!--     Background Video Container -->
     <div class="BGvideo">
         <video style="width: 100%;" autoplay loop muted>
             <source src="Cont/DemoDemo.mp4" type="video/mp4">
         </video>
     </div>
+<!--     Sign in Bar -->
     <div class="SigninBar">
         <div class="WebName1">
             <i>Enviro-Sphere</i>
@@ -20,12 +23,9 @@
                 <h1>Sign In</h1>
                 <h1>Welcome User</h1>
 
-                <!-- Work Later -->
+<!--                 Sign In Bar detailing -->
 
-                <!-- <label class="slider-container">
-                    <input type="checkbox" id="toggle">
-                    <span class="slider"></span>
-                  </label> -->
+<!--                  -->
 
                 <input type="text" name="Email" id="Email1" class="Emailpho1" placeholder="Email or Phone">
                 <span id="emailerrorone" class="emailerrorone"></span>
