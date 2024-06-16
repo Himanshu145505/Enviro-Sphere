@@ -64,6 +64,7 @@ color: #f0f0f0; /* Lighter white */
     margin-top: -25px;
 }
 
+
 #containerSlider
 {
     margin: auto;
@@ -72,6 +73,8 @@ color: #f0f0f0; /* Lighter white */
     padding-top: 100px;
     box-sizing: border-box;
 }
+
+/*Slider Image  */
 #containerSlider img
 {
     width: 100%;
@@ -79,6 +82,8 @@ color: #f0f0f0; /* Lighter white */
     text-align: center;
     align-content: center;
 }
+
+/*Responsive Webpage Styling  */
 @media(max-width: 732px)
 {
     #containerSlider img
