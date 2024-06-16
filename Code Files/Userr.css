@@ -84,13 +84,15 @@ object-fit: cover;
     text-shadow: 2.8px 1.5px #186F65;
 }
 
+/*Login Form sign in styling  */
+
 .LoginFo1 h1 {
     color: white;
     text-align: center;
     margin-top: 45px;
 }
 
-
+/*Email styling Sign in  */
 .Emailpho1 {
     margin-top: 30px;
     margin-left: 55px;
@@ -99,7 +101,7 @@ object-fit: cover;
     font-size: 15px;
     outline-color: #186F65;
 }
-
+/*Password Styling Sign in   */
 .Password1 {
     margin-top: 35px;
     margin-left: 55px;
@@ -109,7 +111,7 @@ object-fit: cover;
     outline-color: #186F65;
 }
 
-
+/*Show Password Eye Ball Styling  */
 #eyeball {
     margin-left: 375px;
     position: relative;
