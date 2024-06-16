@@ -39,7 +39,7 @@
                 <div class="position1">
                 <input type="hidden" name="source" value="user">
 
-<!--                     Submit Button -->
+<!--Submit Button -->
 
                     <input type="submit" name="submit" id="submit1" value="Sign In">
                     <a href="Designer.php" class="switchcli">Swith to Designer</a>
@@ -48,6 +48,8 @@
         </div>
     </div>
 
+<!--     Sign Up bar Container -->
+
     <div class="SignupBar">
         <div class="WebName">
             <i>Enviro-Sphere</i>
@@ -55,8 +57,12 @@
         <div class="LoginFo">
             <form id="SignupFo" action="connect3.php" method="post">
                 <h1>Sign up as a User</h1>
+
+<!--                 Name Input -->
                 <input type="text" name="Name" id="Name" class="Namee" placeholder="Name">
                 <span id="signupnameerror" class="nameerror"></span>
+
+<!--                 Email or Phone Input -->
 
                 <input type="text" name="Email" id="email1" class="Emailpho" placeholder="Email or Phone">
                 <span id="signupemailerror" class="emailerror"></span>
