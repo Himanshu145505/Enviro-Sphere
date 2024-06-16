@@ -247,7 +247,7 @@ object-fit: cover;
     text-align: center;
     margin-top: 30px;
 }
-
+/*Name Field Styling */
 .Namee {
     top: 55%;
     margin-left: 45px;
@@ -256,7 +256,7 @@ object-fit: cover;
     font-size: 15px;
     outline-color:#186F65;
 }
-
+/*Email or Phone field Styling  */
 .Emailpho {
     margin-top: 33px;
     margin-left: 45px;
@@ -266,7 +266,7 @@ object-fit: cover;
     outline-color: #186F65;
 }
 
-
+/*Password Field Styling  */
 .Password {
     margin-top: 27px;
     margin-left: 45px;
@@ -275,7 +275,7 @@ object-fit: cover;
     font-size: 15px;
     outline-color:#186F65;
 }
-
+/*Confirm Password Styling  */
 .ConfirmPassword {
     margin-top: 10px; 
     margin-left: 45px;
