@@ -25,10 +25,12 @@
 
 <!--                 Sign In Bar detailing -->
 
-<!--                  -->
+<!--Email Input-->
 
                 <input type="text" name="Email" id="Email1" class="Emailpho1" placeholder="Email or Phone">
                 <span id="emailerrorone" class="emailerrorone"></span>
+
+<!--Password Input -->
 
                 <input type="password" name="password" id="Password1" class="Password1" placeholder="Password">
                 <button id="eyeball" type="button"><img src="Cont/eyeball.png" height="20px" width="20px"></button>
@@ -36,6 +38,8 @@
 
                 <div class="position1">
                 <input type="hidden" name="source" value="user">
+
+<!--                     Submit Button -->
 
                     <input type="submit" name="submit" id="submit1" value="Sign In">
                     <a href="Designer.php" class="switchcli">Swith to Designer</a>
