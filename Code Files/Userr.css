@@ -133,10 +133,14 @@ object-fit: cover;
     color: white;
 }
 
+/*Position sign in bar  */
+
 .position1 {
     margin-bottom: 500px;
     margin-left: 25px;
 }
+
+/*Email Error for Sign in   */
 
 .emailerrorone{
     color: rgb(233, 23, 33);
@@ -145,7 +149,7 @@ object-fit: cover;
     margin-top: 25px; 
     display: inline-block;
 }
-
+/*Password error for Sign in   */
 .passerrorone{
     color: rgb(233, 23, 33);
     font-size: 20px;
@@ -153,6 +157,8 @@ object-fit: cover;
     margin-top: 15px; 
     display: inline-block;
 }
+
+/*Input tag eorr border red styling  */
 
 .error11 {
     border: 2px solid red;
