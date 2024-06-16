@@ -163,6 +163,8 @@ object-fit: cover;
 .error11 {
     border: 2px solid red;
 }
+
+/*Slide container positioning  */
 .slider-container {
     position: relative;
     display: inline-block;
@@ -171,7 +173,7 @@ object-fit: cover;
     bottom: 180px;
     left: 400px;
   }
-  
+/*   Slider Styling */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -183,7 +185,7 @@ object-fit: cover;
     transition: .4s;
     border-radius: 20px;
   }
-  
+/*   Slider Before Styling */
   .slider:before {
     position: absolute;
     content: "";
@@ -195,6 +197,8 @@ object-fit: cover;
     transition: .4s;
     border-radius: 50%;
   }
+
+/*Slider off position , color and other stylings  */
   
   .slider.on {
     background-color: #186F65;
@@ -228,7 +232,7 @@ object-fit: cover;
     opacity: 0.9;
     transition: left 0.5s ease;
 }
-
+/*Sign up Bar website name  */
 .WebName {
     font-size: 50px;
     text-align: center;
