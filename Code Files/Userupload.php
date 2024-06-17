@@ -275,34 +275,50 @@ if(isset($_POST['btn_upload']))
                 <label for="type" class="form-label">Type</label>
                 <input type="text" class="form-control" name="type" id="type" placeholder="eg: plastic , iron , etc" required>
             </div>
+
+<!--             Material Age Field -->
             <div class="col-md-6">
                 <label for="material_age" class="form-label">Material Age</label>
                 <input type="text" class="form-control" name="material_age" id="material_age" placeholder="eg : 2 yrs, 3yrs" required>
             </div>
+
+<!--             Material Quantity Field -->
             <div class="col-md-6">
                 <label for="material_Quality" class="form-label">Material Quality</label>
                 <input type="text" class="form-control" name="material_Quality" id="material_Quality" placeholder="eg : good, average, best" required>
             </div>
+
+<!--        Contibutor Address Field -->
             <div class="col-md-6">
                 <label for="address" class="form-label">Address</label>
                 <input type="text" class="form-control" name="address" id="address" placeholder="Address" required>
             </div>
+
+<!--     State Field         -->
             <div class="col-md-6">
                 <label for="state" class="form-label">State</label>
                 <input type="text" class="form-control" name="state" id="state" placeholder="State" required>
             </div>
+
+<!--             City Details -->
             <div class="col-md-6">
                 <label for="city" class="form-label">City</label>
                 <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
             </div>
+
+<!--             ZIP Code -->
             <div class="col-md-6">
                 <label for="ZIP_code" class="form-label">ZIP Code</label>
                 <input type="text" class="form-control" name="ZIP_code" id="ZIP_code" placeholder="ZIP Code" required>
             </div>
+
+<!--             Description Details -->
             <div class="col-12">
                 <label for="description" class="form-label">Description</label>
                 <textarea class="form-control" name="description" id="description" placeholder="about the material" required></textarea>
             </div>
+
+<!--             Submit Button  -->
             <div class="col-12 text-center">
                 <button type="submit" name="btn_upload" class="btn btn-success">
                     Submit
