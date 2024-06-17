@@ -232,6 +232,7 @@ if(isset($_POST['btn_upload']))
             $sql = "INSERT INTO `useruploads`(`image`, `materialname`, `type`, `material_age`, `material_Quality`, `address`, `state`, `city`, `ZIP_code`, `description`) 
                     VALUES('$filename', '$materialname', '$type', '$material_age', '$material_Quality', '$address', '$state', '$city', '$ZIP_code', '$description')";
             
+           // Process Status Result
             $result = mysqli_query($con, $sql);
             echo "<div class='alert alert-success' role='alert'><h4 class='text-center'>Material uploaded</h4></div>";
             echo "<div class='alert alert-success' role='alert'>Your material is successfully uploaded. Thank you for your Contribution !!</div>";
@@ -255,16 +256,21 @@ if(isset($_POST['btn_upload']))
 
 
        
-
+<!--          User Upload Php file connect -->
         <form action="Userupload.php" method="post" class="row g-3" enctype="multipart/form-data">
             <div class="col-md-6">
+<!--                 Choose File Option -->
                 <label for="choosefile" class="form-label">Choose File</label>
                 <input type="file" class="form-control" name="choosefile" id="choosefile" required> 
             </div>
+
+<!--             Material Name Field -->
             <div class="col-md-6">
                 <label for="materialname" class="form-label">Material Name</label>
                 <input type="text" class="form-control" name="materialname" id="materialname" placeholder="Material Name" required>
             </div>
+
+<!--             Material Type Field -->
             <div class="col-md-6">
                 <label for="type" class="form-label">Type</label>
                 <input type="text" class="form-control" name="type" id="type" placeholder="eg: plastic , iron , etc" required>
