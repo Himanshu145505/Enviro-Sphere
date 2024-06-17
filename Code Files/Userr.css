@@ -312,7 +312,7 @@ object-fit: cover;
     margin-left: 25px;
 }
 
-
+/*Name Error Message Display  */
 .nameerror{
     color: rgb(233, 23, 33);
     font-size: 20px;
@@ -321,6 +321,7 @@ object-fit: cover;
     display: inline-block;
 }
 
+/*Email error message display  */
 .emailerror{
     color: rgb(233, 23, 33);
     font-size: 20px;
