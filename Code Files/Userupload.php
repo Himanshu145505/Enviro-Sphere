@@ -202,6 +202,8 @@ transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale
        <?php
 if(isset($_POST['btn_upload']))
 {
+
+    // Database Details
     $con = mysqli_connect("127.0.0.1:3308", "root", "", "envirosphere");
 
     // Check if file was uploaded
@@ -225,6 +227,8 @@ if(isset($_POST['btn_upload']))
             $ZIP_code = $_POST['ZIP_code'];
             $description = $_POST['description'];
 
+
+            // Insertion into useruploads Table
             $sql = "INSERT INTO `useruploads`(`image`, `materialname`, `type`, `material_age`, `material_Quality`, `address`, `state`, `city`, `ZIP_code`, `description`) 
                     VALUES('$filename', '$materialname', '$type', '$material_age', '$material_Quality', '$address', '$state', '$city', '$ZIP_code', '$description')";
             
