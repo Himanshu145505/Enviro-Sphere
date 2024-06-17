@@ -1,4 +1,5 @@
 <?php
+// Database Details
 $servername = "127.0.0.1:3308";
 $username = "root";
 $password = "";
@@ -19,13 +20,14 @@ $id = $_POST['id'];
 $check_stmt->execute();
 $check_result = $check_stmt->get_result();
 
+
 if ($check_result->num_rows > 0) {
-    // Item is already in the cart
+    // Item is already in the cart message and redirection to homepage
     echo "<script>
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('popup').style.display = 'block';
                 setTimeout(function() {
-                    window.location.href = 'UHome.php';
+                    window.location.href = 'UHome.php'; 
                 }, 400); 
             });
           </script>";
@@ -47,6 +49,7 @@ if ($check_result->num_rows > 0) {
         die("Error executing statement: " . $stmt->error);
     }
 
+    // Redirection to Home Page
     echo "<script>
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('popup-success').style.display = 'block';
@@ -61,6 +64,7 @@ $check_stmt->close();
 if (isset($stmt)) {
     $stmt->close();
 }
+// Connection Close
 $conn->close();
 ?>
 
