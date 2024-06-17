@@ -329,7 +329,7 @@ object-fit: cover;
     margin-top: 15px; 
     display: inline-block;
 }
-
+/*Password Error message display  */
 .passerror{
     color: rgb(233, 23, 33);
     font-size: 20px;
@@ -338,6 +338,7 @@ object-fit: cover;
     display: inline-block;
 }
 
+/*Confirm Pasword error message display  */
 .conpasserror{
     color: rgb(233, 23, 33);
     font-size: 20px;
@@ -346,6 +347,7 @@ object-fit: cover;
     display: inline-block;
 }
 
+/*input tag error border red color  */
 .error1 {
     border: 2px solid red;
 }
