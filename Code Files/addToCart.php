@@ -71,8 +71,12 @@ $conn->close();
 <!DOCTYPE html>
 <html>
 <head>
+
+<!--     Popup message Section  -->
     <title>Pop-up Styling</title>
     <style>
+
+/*         Pop Up Styling */
         .popup {
         display: none;
         position: fixed;
@@ -88,15 +92,21 @@ $conn->close();
         text-align: center; /* Center the text */
         font-size: 30px; /* Increase font size */
     }
+
+/*         Popup Success Message */
     .popup-success {
         border-color: green;
     }
     </style>
 </head>
 <body>
+
+<!--     Item is Already in the Cart message -->
     <div id="popup" class="popup">
         Item is already in the cart
     </div>
+
+<!--     Added to Cart Message -->
     <div id="popup-success" class="popup popup-success">
         Added to Cart
     </div>
