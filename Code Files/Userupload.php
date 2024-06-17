@@ -177,6 +177,8 @@ transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale
             <div id="shopName"><a href="UHome.php"> <b>Enviro</b>Sphere</a></div>
             <!-- COLLECTION ON WEBSITE -->
             <div id="collection">
+
+<!--                 Home Section and Category -->
                 <div id="homee"><a href="UHome.php">Home</a></div>
                 <div id="Category">
     <div class="dropdown-content">
@@ -187,6 +189,8 @@ transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale
     </section>
 </header>
 
+
+<!--Upload Material Section -->
     <div id="upl" class="alert alert-secondary" role="alert">
         <h4 class="marg">Upload Your Material</h4>
     </div>
