@@ -15,12 +15,17 @@
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
+<!--     Header Link -->
     <link rel="stylesheet" href="header.css">
+
+<!--     Other Links -->
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+<!--     Footer Link -->
     <link rel="stylesheet" href="footer.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -32,6 +37,7 @@
 
     <style>
 
+/*         Background Styling */
 body{
     background-color : black;
     overflow-x: hidden; /* Hide horizontal scroll bar */
@@ -78,10 +84,13 @@ color: #f0f0f0; /* Lighter white */
 color: #f0f0f0; /* Lighter white */
 }
 
+/*         Container BG Color */
 #container {
     background-color: #186F65;
 }
 
+        
+/*Container Slider Styling  */
 #containerSlider
 {
     margin: auto;
@@ -90,6 +99,8 @@ color: #f0f0f0; /* Lighter white */
     padding-top: 100px;
     box-sizing: border-box;
 }
+
+/*         Slider Image */
 #containerSlider img
 {
     width: 100%;
@@ -97,6 +108,8 @@ color: #f0f0f0; /* Lighter white */
     text-align: center;
     align-content: center;
 }
+
+/*         Responsive Webpage Styling */
 @media(max-width: 732px)
 {
     #containerSlider img
@@ -113,18 +126,20 @@ color: #f0f0f0; /* Lighter white */
 }
 
 
-
+/*Input Styling  */
 #input{
     width : 650px;
 }
 
+
+/*         Home Section Styling */
 #homee{
     margin-left: -15px;
     margin-top : 8px;
 }
 
 
-
+/*Home, Category and Awareness Styling  */
 #homee a,
 #Category a,
 #Awareness a {
@@ -138,10 +153,11 @@ transform: scale(1.1); /* Scale the item slightly on hover */
 transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
 }
 
+/*         Form Label */
 .form-label{
     color:white;
 }
-
+/*Margin Styling  */
 .marg{
     margin-top: 100px;
     margin-left: 600px;
