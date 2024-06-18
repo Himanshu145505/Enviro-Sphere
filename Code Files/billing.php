@@ -423,25 +423,29 @@
     color: white; /* Change the color for dark mode */
 }
 
+/*         Table Styling */
+
 .table {
             margin-top: 120px;
             width:1400px;
             margin-left:-325px;
         }
 
+/*         Table Head and Data */
+
         .table th, .table td {
             vertical-align: middle;
         }
-
+/*Table Head Styling  */
         .table th {
             background-color: #186F65;
             color: white;
         }
-
+/*Table Data Styling  */
         .table td {
             background-color: white;
         }
-
+/*Primary button Styling  */
         .btn-primary {
             background-color: green;
             color: white;
@@ -449,25 +453,27 @@
             margin-top : 5px;
             margin-left: 285px;
         }
-
+/*Button Hover Styling  */
         .btn-primary:hover {
             background-color: #003300;
             border-color:green;
         }
 
-
+/*Bill Info Styling  */
 #Billinfo{
     color:white;
     margin-left:90px;
     margin-top : -39px;
 }
+
+/*         Name, Phone, email add, Payment Styling */
 #funame,#phonee,#emaill,#add,#Paymentmeth{
     color:white;
     margin-left:60px;
     margin-bottom : -20px;
 }
 
-
+/*  */
 #phone,#email,#address,#name,#selpayment{
     margin-left:50px;
     margin-top: 5px
