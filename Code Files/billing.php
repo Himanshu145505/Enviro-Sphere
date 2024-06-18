@@ -592,17 +592,21 @@
 
 <script>
 
-
+// Theme Change 
 document.getElementById("mode-toggle").addEventListener("click", function() {
     var body = document.body;
     var currentMode = body.classList.contains("light-mode") ? "light" : "dark";
     body.classList.toggle("light-mode");
 
     // Change colors based on the current mode
+
+    // if current theme is dark make it light
     if (currentMode === "dark") {
         body.style.backgroundColor = "white";
         body.style.color = "black";
         document.getElementById("mode-icon").src = "Cont/night-mode.png"; // Update path to moon icon
+
+        // if the BG is black it will make it light
     } else {
         body.style.backgroundColor = "black";
         body.style.color = "white";
