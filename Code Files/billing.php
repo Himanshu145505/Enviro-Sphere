@@ -114,6 +114,8 @@
             text-align: center;
             align-content: center;
         }
+
+/*         Responsive Styling */
         @media(max-width: 732px)
         {
             #containerSlider img
@@ -136,7 +138,7 @@
             justify-content: space-around;
             margin-top: 20px;
         }
-
+/*Product Styling  */
         .product {
             width: 255px;
             height: 332px;
@@ -150,7 +152,7 @@
             margin-bottom : 50px;
             
         }
-
+/*Product Hover Styling  */
         .product:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
