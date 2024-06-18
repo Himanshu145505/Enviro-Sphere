@@ -181,16 +181,18 @@
             cursor: pointer;
         }
 
+/*         Product button hover */
+
         .product button:hover {
             background-color: #0056b3;
         }
-
+/*Product Info  */
         .product-info {
             text-align: center;
             position: relative;
             top: -10px; 
         }
-
+/*Add to Cart Styling  */
         .add-to-cart {
             width: 270px;
             margin-left: -135px;
@@ -204,7 +206,7 @@
             cursor: pointer;
             background-color: green !important;
         }
-
+/*Add to Cart Hover Effect  */
         .add-to-cart:hover {
     background-color: #003300 !important; /* Darker green on hover */
 }
