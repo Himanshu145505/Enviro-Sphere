@@ -551,6 +551,8 @@
 <!--         Billing Form -->
     <form id="billing-form" action="process_payment.php" method="post">
             <div class="mb-3">
+
+<!--Lables -->
                 <label id="funame" for="name" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
             </div>
@@ -574,6 +576,8 @@
                     <option value="Cash on Delivery">Cash on Delivery</option>
                 </select>
             </div>
+
+<!--         Proceed to Pay Button -->
             <button type="submit" class="btn btn-primary">Proceed to Pay</button>
         </form>
 
