@@ -473,7 +473,7 @@
     margin-bottom : -20px;
 }
 
-/*  */
+/* Positioning */
 #phone,#email,#address,#name,#selpayment{
     margin-left:50px;
     margin-top: 5px
@@ -523,6 +523,8 @@
                 </div>
             <!-- USER SECTION (CART AND USER ICON) -->
             <div id="user">
+
+<!--                 Cart and User Icon  -->
                 <a class="CART" href="shop.php" id="cart-button"> <i class="fas fa-shopping-cart addedToCart"></i></a>
 
                 <a class="UserICON" href="Dashboard.php"> <i class="fas fa-user-circle userIcon"></i> </a>
@@ -531,6 +533,7 @@
 
     </section>
 </header>
+
 
 <button class="DLMode" id="mode-toggle"><img id="mode-icon" src="Cont/brightness.png" alt="Mode"></button>
 
@@ -541,8 +544,11 @@
         <table class="table text-center">
     </table>
 
+
+<!--         Billing Information Div -->
     <div class="container mt-5">
     <h2 id="Billinfo" class="text-center mb-4">Billing Information</h2>
+<!--         Billing Form -->
     <form id="billing-form" action="process_payment.php" method="post">
             <div class="mb-3">
                 <label id="funame" for="name" class="form-label">Full Name</label>
