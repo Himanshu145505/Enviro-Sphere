@@ -32,13 +32,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <style> 
-
+/*Background Styling  */
         body{
             background-color : black;
             overflow-x: hidden; /* Hide horizontal scroll bar */
             transition: background-color 0.3s, color 0.3s;
         }
-
+/*Header Styling  */
         header a:hover {
     color: #14ff72cb; /* Change text color to green */
     background: #14ff72cb; /* Change background color to green */
@@ -48,6 +48,7 @@
 
 
 /* Remove green color effect from cart and user icon */
+/*         Cart abd User Icon Styling */
 .CART:hover,
 .UserICON:hover {
     color: inherit; /* Use the default text color */
