@@ -91,7 +91,7 @@
     .userIcon {
     color: #f0f0f0; /* Lighter white */
 }
-
+/*Container Styling  */
         #container {
             background-color: #186F65;
             margin-top: -120px;
@@ -105,6 +105,8 @@
             padding-top: 100px;
             box-sizing: border-box;
         }
+
+/*         Slider Container Image Composition */
         #containerSlider img
         {
             width: 100%;
