@@ -48,7 +48,7 @@
 
 
 /* Remove green color effect from cart and user icon */
-/*         Cart abd User Icon Styling */
+/*         Cart and User Icon Styling */
 .CART:hover,
 .UserICON:hover {
     color: inherit; /* Use the default text color */
