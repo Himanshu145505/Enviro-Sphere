@@ -1,6 +1,7 @@
 body
 {
     margin: 0;
+/*     Font Styling */
     font-family: 'Lato', sans-serif;
 }
 
@@ -75,6 +76,8 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
 /*  Responsive Styling*/
+
+/*Larger Displays  */
 @media(max-width: 1350px)
 {
     #containerFooter
@@ -82,6 +85,7 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         padding: 15px 200px;
     }
 }
+/*large display  */
 @media(max-width: 1166px)
 {
     #containerFooter
