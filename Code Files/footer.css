@@ -4,6 +4,7 @@ body
     font-family: 'Lato', sans-serif;
 }
 
+/*Footer Styling  */
 #containerFooter
 {
     width: 100%;
@@ -17,16 +18,22 @@ body
     padding: 15px 300px;
     box-sizing: border-box;
 }
+
+/*Footer Hover Styling  */
 #containerFooter h3:hover, #containerFooter p:hover
 {
     color: lightslategray;
     cursor: pointer;
 }
+
+/*Web Footer Styling  */
 #webFooter
 {
     padding-top: 30px;
     font-size: 12px;
 }
+
+/*Credit Styling  */
 #credit 
 {
     width: 100%;
