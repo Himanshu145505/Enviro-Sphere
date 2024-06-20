@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"]) && $_POST["s
     // Insert user data into the users table
     $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
     if ($conn->query($sql) === TRUE) {
+        // New User Record Storing
         echo "New user record created successfully";
         if ($source == "designer") {
             header("Location: DeHome.php."); // Redirect to Demain.html for designers
@@ -57,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"]) && $_POST["s
         }
         exit;
     } else {
+        // Invalid Credential Message
         echo "<script>alert('Invalid Credentials !! Please try again');</script>";
     }
 }
