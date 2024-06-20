@@ -46,12 +46,15 @@ body
     letter-spacing: 1px;
 }
 
+/*Credit Anchor Styling  */
 #credit a
 {
     color: white;
     text-decoration: none;
     position: relative;
 }
+
+/*Credit Anchor After Effect Styling  */
 #credit a::after
 {
 content: "";
@@ -71,6 +74,7 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
+/*  */
 @media(max-width: 1350px)
 {
     #containerFooter
