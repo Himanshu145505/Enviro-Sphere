@@ -74,7 +74,7 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
-/*  */
+/*  Responsive Styling*/
 @media(max-width: 1350px)
 {
     #containerFooter
@@ -89,6 +89,8 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         padding: 15px 100px;
     }
 }
+
+/* for mid size screens */
 @media(max-width: 950px)
 {
     #containerFooter
@@ -120,6 +122,8 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         padding: 15px 20px;
     }
 }
+
+/*for smaller screens  */
 @media(max-width: 540px)
 {
     #containerFooter
