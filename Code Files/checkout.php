@@ -1,4 +1,5 @@
 <?php
+// Connection Details
 $servername = "127.0.0.1:3308";
 $username = "root";
 $password = "";
@@ -18,6 +19,8 @@ $cart_items_result = $conn->query($cart_items_sql);
 
 if ($cart_items_result->num_rows > 0) {
     // Loop through each cart item and insert into cart_details table
+
+    // Product id Fetching
     while ($row = $cart_items_result->fetch_assoc()) {
         $product_id = $row['id'];
         $name = $row['name'];
@@ -39,6 +42,8 @@ if ($cart_items_result->num_rows > 0) {
         echo "Error clearing cart: " . $conn->error;
     }
 
+
+    // Redirection after Successful Checkout
     echo "Checkout successful!";
     // echo "Before redirect"; 
 header("Location: billing.php");
