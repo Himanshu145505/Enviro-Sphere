@@ -40,6 +40,8 @@ if (isset($_POST['place_order'])) {
         $sql = "INSERT INTO orders (name, description, price, image, date_added) VALUES ('$name', '$description', '$price', '$image', '$date_added')";
 
         // Execute the query
+
+        // It is for checking that everything is fetch and stored correctly or not
         $result = $conn->query($sql);
         if (!$result) {
             echo "Error: " . $sql . "<br>" . $conn->error;
