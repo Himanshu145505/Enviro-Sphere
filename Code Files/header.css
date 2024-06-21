@@ -172,6 +172,7 @@ body
     }
 }
 
+Responsiveness for Mid Size Displays
 
 @media(max-width: 750px)
 {
@@ -194,6 +195,7 @@ body
     }
 }
 
+For Small - Mid size displays
 @media(max-width: 650px)
 {
     #shopName
@@ -209,6 +211,8 @@ body
         font-size: 30px;
     }
 }
+
+/*For Small Screens  */
 @media(max-width: 550px)
 {
     #container 
