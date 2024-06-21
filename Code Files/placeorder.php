@@ -53,9 +53,11 @@ if (isset($_POST['place_order'])) {
     unset($_SESSION['cart']);
 
     // Redirect to a confirmation page or display a success message
+    // After placing order the user will be redirected to the billing page
     header("Location: billing.php");
     exit();
 }
 
 $conn->close();
+// Connection Close
 ?>
