@@ -70,6 +70,7 @@ body
     color: rgb(29, 29, 29);
 }
 
+/*Search Bar Styling and Positioning  */
 .search
 {
     padding: 14px;
@@ -80,6 +81,7 @@ body
     position: absolute;
 }
 
+/*Cart Icon Styling  */
 .addedToCart
 {
     font-size: 1.5em;
