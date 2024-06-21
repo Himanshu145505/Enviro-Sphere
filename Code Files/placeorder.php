@@ -49,6 +49,7 @@ if (isset($_POST['place_order'])) {
     }
 
     // Clear the cart after placing the order
+    // It will completely clear the table name cart items after transfering all the data from the cart items to order table
     unset($_SESSION['cart']);
 
     // Redirect to a confirmation page or display a success message
