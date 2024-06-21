@@ -36,6 +36,7 @@ if (isset($_POST['place_order'])) {
         $image = $item['image'];
 
         // SQL query to insert into the "orders" table
+        // When user will click on the Place Order Button then all the items from the cart will be stored into the Orders Table 
         $sql = "INSERT INTO orders (name, description, price, image, date_added) VALUES ('$name', '$description', '$price', '$image', '$date_added')";
 
         // Execute the query
