@@ -2,6 +2,7 @@ body
 {
     margin: 0;
 }
+/*Badge Styling  */
 #badge
 {
     position: absolute;
@@ -13,6 +14,8 @@ body
     top: 10px;
     right:158px;
 }
+
+/*Container Styling  */
 #container
 {
     background-color: white;
@@ -31,28 +34,36 @@ body
     position: fixed;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149); 
 }
+
+/*Enviro Sphere Styling  */
 #shopName 
 {
     font-size: 40px; 
     font-family: 'Lato', sans-serif;
 }
+/*Enviro Sphere Anchor Styling  */
 #shopName a
 {
     text-decoration: none;
     color: rgb(29, 29, 29);
 }
+
+/*Shop Name Styling  */
 #shopName > b
 {
     font-weight: 900;
     font: black;
 }
 
+/*Collection Styling  */
 #collection
 {
     font-weight: bold;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+/*Collection Anchor  */
 #collection a
 {
     text-decoration: none;
