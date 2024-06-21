@@ -87,6 +87,8 @@ body
     font-size: 1.5em;
     margin-right: 25px;
 }
+
+/*User Positioning  */
 #user
 {
     display: flex;
@@ -94,10 +96,13 @@ body
     align-items: center;
 }
 
+/*User Icon Styling  */
 .userIcon
 {
     font-size: 45px;
 }
+
+/*Search Input Styling  */
 #input 
 {
     width: 35em;
@@ -107,6 +112,7 @@ body
     border: none;
     border-radius: 5px;
 }
+/*Input Placeholder Styling  */
 #input::placeholder
 {
     font-weight: bold;
@@ -121,6 +127,7 @@ body
 }
 
 /* ----------------------------- MEDIA QUERY --------------------------- */
+
 
 @media(max-width: 1300px)
 {
