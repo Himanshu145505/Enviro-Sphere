@@ -1,4 +1,5 @@
 <?php
+// Session Start
 session_start();
 
 // $servername = "127.0.0.1:3308";
@@ -7,9 +8,13 @@ session_start();
 // $dbname = "envirosphere";
 
 // Create connection
+
+// Connection Attributes
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
+
+// Connecttion check from the database
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
