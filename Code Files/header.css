@@ -172,7 +172,7 @@ body
     }
 }
 
-Responsiveness for Mid Size Displays
+/* Responsiveness for Mid Size Displays */
 
 @media(max-width: 750px)
 {
@@ -195,7 +195,7 @@ Responsiveness for Mid Size Displays
     }
 }
 
-For Small - Mid size displays
+/* For Small - Mid size displays */
 @media(max-width: 650px)
 {
     #shopName
@@ -222,6 +222,8 @@ For Small - Mid size displays
 }
 
 /* badge media */
+
+/*All the Responsive styling for the Navbar and other Product Displays for all screen sizes from Small to Largest  */
 
 @media(max-width: 1480px)
 {
