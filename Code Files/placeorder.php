@@ -28,6 +28,7 @@ if (isset($_POST['place_order'])) {
     $cart_items = $_SESSION['cart'];
 
     // Loop through each cart item and insert into the "orders" table
+    // It will fetch the item details from cart items
     foreach ($cart_items as $item) {
         $name = $item['name'];
         $description = $item['description'];
