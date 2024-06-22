@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     if ($conn->query($sql) === TRUE) {
-        
+        // If the Payment Method is Cash on Delivery then it will generate a bill with order details, customer details and delivery details
         if ($paymentMethod === "Cash on Delivery") {
             // Display the billing information
             echo "<div style='margin: 50px;'>";
