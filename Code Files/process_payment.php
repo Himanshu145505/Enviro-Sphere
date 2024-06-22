@@ -102,11 +102,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } if ($paymentMethod === "Online") {
         // Redirect to 
         header("Location: UPI.php");
+        // Redirection
         exit; // Ensure that no other output is sent
     }
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
+    // If there is an error in Redirection or from the choosen method
 }
 
 $conn->close();
+// Connection Close
 ?>
