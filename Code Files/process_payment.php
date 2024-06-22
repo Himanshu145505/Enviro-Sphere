@@ -1,4 +1,5 @@
 <?php
+// Connection Details
 $servername = "127.0.0.1:3308";
 $username = "root";
 $password = "";
@@ -12,6 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Payment Process Customer details 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullName = $_POST["name"];
     $address = $_POST["address"];
@@ -20,7 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $paymentMethod = $_POST["payment-method"];
 
     // Generate a random order ID
+    
     $orderID = mt_rand(100000, 999999);
+    // This Rand Method will generate a random order id 
 
     // Set the timezone to Asia/Kolkata (India)
     date_default_timezone_set('Asia/Kolkata');
