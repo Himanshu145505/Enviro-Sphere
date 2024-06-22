@@ -64,6 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $totalAmount = 0;
 
             // Fetch and display cart details
+
+            // This Query will fetch the items from the cart
             $cart_sql = "SELECT * FROM cart_details";
             $cart_result = $conn->query($cart_sql);
             if ($cart_result->num_rows > 0) {
@@ -77,6 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<tr><td colspan='5' style='text-align: right; padding-right: 10px;'>Total Amount:</td><td style='border: 1px solid #ddd; padding: 10px;'>$totalAmount</td></tr>";
                 echo "</table>";
             } else {
+                // If there are no items in the cart then it will show an error message
                 echo "No items in the cart.";
             }
         }
