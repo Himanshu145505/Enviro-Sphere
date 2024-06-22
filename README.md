@@ -15,4 +15,4 @@ Here's how it works👷🏻:
 
 Working Project Video Link : https://drive.google.com/drive/folders/1FthZz0snRcuMyxmFQLLSYcbQr6vS0xSJ?usp=drive_link
 
-Contributions 🤝 are welcome! Please open an issue or submit a pull request.
+Contributors 🤝 are welcome! Please open an issue or submit a pull request.
