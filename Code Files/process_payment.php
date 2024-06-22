@@ -31,9 +31,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the current date and time for the order
     $orderTime = date("Y-m-d H:i:s");
 
+    // SQL QUERY for inserting the Billing Details to BillingInfo Table
     $sql = "INSERT INTO BillingInfo (fullName, address, email, phone, paymentMethod, orderID, orderTime) VALUES ('$fullName', '$address', '$email', '$phone', '$paymentMethod', '$orderID', '$orderTime')";
 
+    
     if ($conn->query($sql) === TRUE) {
+        
         if ($paymentMethod === "Cash on Delivery") {
             // Display the billing information
             echo "<div style='margin: 50px;'>";
