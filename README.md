@@ -14,3 +14,5 @@ Here's how it works👷🏻:
 5️⃣ We list these products on our website, and once sold, 70% of the proceeds go back to the NGOs and schools to support child education, while the remaining 30% helps us scale this initiative. 📈💡
 
 Working Project Video Link : https://drive.google.com/drive/folders/1FthZz0snRcuMyxmFQLLSYcbQr6vS0xSJ?usp=drive_link
+
+Contributions 🤝 are welcome! Please open an issue or submit a pull request.
