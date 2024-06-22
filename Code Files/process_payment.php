@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              }, 1000);
              </script>";
 
-        
+        // If the Payment Method is Online then it will redirect to UPI.php where there will be a QR Code for making the payment
     } if ($paymentMethod === "Online") {
         // Redirect to 
         header("Location: UPI.php");
