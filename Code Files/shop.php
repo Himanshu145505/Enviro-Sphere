@@ -31,12 +31,14 @@
 
     <style>
 
+
+/* Background Styling */
         body{
             background-color : black;
             overflow-x: hidden; /* Hide horizontal scroll bar */
             transition: background-color 0.3s, color 0.3s;
         }
-
+/*Header Hover Styling  */
         header a:hover {
     color: #14ff72cb; /* Change text color to green */
     background: #14ff72cb; /* Change background color to green */
@@ -46,19 +48,21 @@
 
 
 /* Remove green color effect from cart and user icon */
+
+/*         Cart and My Account Icon Hover Styling */
 .CART:hover,
 .UserICON:hover {
     color: inherit; /* Use the default text color */
     background: none; /* Remove background color */
     border-radius: inherit; /* Use the default border-radius */
 }
-
+/*Light Mode  */
         .light-mode {
     /* Light mode styles */
     background-color: white;
     color: black;
 }
-
+/*Dark Mode  */
 .dark-mode {
     /* Dark mode styles */
     background-color: black;
@@ -72,18 +76,21 @@
 }
 
 /* Change color of "Enviro Sphere" */
+
+/*         Web Name Styling */
 #shopName {
     color: #e0e0e0; /* Lighter variant of white */
     font-family: 'Raleway', sans-serif;/* Use a different font, for example, Roboto */
 }
 
-
+/*Cart Icon Color  */
 /* Change color of cart icon */
     .addedToCart {
     color: #f0f0f0; /* Lighter white */
 }
 
 /* Change color of user icon */
+/*         User Icon Color */
     .userIcon {
     color: #f0f0f0; /* Lighter white */
 }
