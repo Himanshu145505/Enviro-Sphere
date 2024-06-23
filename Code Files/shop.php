@@ -143,7 +143,7 @@
             justify-content: space-around;
             margin-top: 20px;
         }
-
+/*Product Styling  */
         .product {
             width: 255px;
             height: 332px;
@@ -157,12 +157,12 @@
             margin-bottom : 50px;
             
         }
-
+/*Product Hover Effect  */
         .product:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
-
+/*Product Image Styling  */
         .product img {
     width: 100%;
     height: 230px;
@@ -170,12 +170,12 @@
     object-fit: cover;
     transition: transform 0.3s;
 }
-
+/*Product Image Hover Effect  */
 .product:hover img {
     transform: scale(1.1);
 }
 
-
+/*  */
         .product button {
             margin-top: 10px;
             padding: 5px 10px;
