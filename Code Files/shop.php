@@ -477,8 +477,11 @@
             <div id="shopName"><a href="UHome.php"> <b>Enviro</b>Sphere</a></div>
             <!-- COLLECTION ON WEBSITE -->
             <div id="collection">
+<!--                 Home Section -->
                 <div id="homee"><a href="UHome.php">Home</a></div>
+<!--                 Category Section -->
                 <div id="Category">
+<!--                     Awareness Section -->
     <a href="Awareness.html">Awareness</a>
     <div class="dropdown-content">
         
@@ -487,15 +490,16 @@
                 </div>
             <!-- USER SECTION (CART AND USER ICON) -->
             <div id="user">
+<!--                 Cart Section -->
                 <a class="CART" href="shop.php" id="cart-button"> <i class="fas fa-shopping-cart addedToCart"></i></a>
-
+<!--My Accounts Section  -->
                 <a class="UserICON" href="Dashboard.php"> <i class="fas fa-user-circle userIcon"></i> </a>
             </div>
         </div>
 
     </section>
 </header>
-
+<!--Dark and Light Mode Toggle  -->
 <button class="DLMode" id="mode-toggle"><img id="mode-icon" src="Cont/brightness.png" alt="Mode"></button>
 
 
@@ -505,6 +509,7 @@
 
         <table class="table text-center">
             <tr>
+<!--Product Details -->
                 <th>Product Id</th>
                 <th>Product Img</th>
                 <th>Name</th>
@@ -515,11 +520,13 @@
             </tr>
 
             <?php
+// Connection Details
 $conn = mysqli_connect("127.0.0.1:3308", "root", "", "envirosphere");
 
 // Initialize total amount
 $totalAmount = 0;
 
+// SQL Query for Selecting the Items from Cart
 $sql2 = "SELECT * FROM `cart` WHERE 1";
 $result2 = mysqli_query($conn, $sql2);
 while ($fetch = mysqli_fetch_assoc($result2)) {
