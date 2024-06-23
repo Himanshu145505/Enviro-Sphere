@@ -291,7 +291,7 @@
 #input::placeholder {
     font-size: 15px; /* Adjust the font size as needed */
 }
-
+/*Wall Heading Styling  */
 .wall-heading{
     margin-left:30px;
     color:white;
@@ -333,12 +333,12 @@
     border: none;
     cursor: pointer;
 }
-
+/*Mode Icon Styling  */
 #mode-icon {
     width: 24px; /* Adjust the width and height as needed */
     height: 24px;
 }
-
+/*toggle Styling  */
 #mode-toggle {
     position: fixed; /* Fixed position */
     top: 26px; /* Distance from the top of the viewport */
@@ -428,25 +428,27 @@
     color: white; /* Change the color for dark mode */
 }
 
+
+/*         Table Styling */
 .table {
             margin-top: 120px;
             width:1400px;
             margin-left:-325px;
         }
-
+/*Heading and Data  */
         .table th, .table td {
             vertical-align: middle;
         }
-
+/*Headings BG Color  */
         .table th {
             background-color: #186F65;
             color: white;
         }
-
+/*Data BG  */
         .table td {
             background-color: white;
         }
-
+/*Button Stylig  */
         .btn-primary {
             background-color: green;
             color: white;
@@ -454,7 +456,7 @@
             margin-top : -15px;
             margin-left: 960px;
         }
-
+/*Button Hover Styling  */
         .btn-primary:hover {
             background-color: #003300;
             border-color:green;
