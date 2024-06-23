@@ -622,18 +622,20 @@ document.getElementById("Category").addEventListener("mouseleave", function() {
 
 
 
-// Total Amount Update Function (Each Time User Add)
+// Total Amount Update Function (Each Time User Add or remove somehting the Total Amount will Update Accordingly)
 function updateTotal() {
     var totalAmount = 0;
     var quantityInputs = document.getElementsByName("quantity");
 
+
+    // Quantity Increase Functioning
     for (var i = 0; i < quantityInputs.length; i++) {
         var quantity = parseInt(quantityInputs[i].value);
         var priceText = quantityInputs[i].parentNode.previousElementSibling.textContent;
         var price = parseFloat(priceText.replace("Rs. ", ""));
         totalAmount += price * quantity;
     }
-
+// Total Amount Disaplay
     document.getElementById('total-amount').textContent = "Rs. " + totalAmount.toFixed(2);
 }
 
