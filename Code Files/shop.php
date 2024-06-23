@@ -195,7 +195,7 @@
             position: relative;
             top: -10px; 
         }
-
+/*Add to Cart Styling  */
         .add-to-cart {
             width: 270px;
             margin-left: -135px;
@@ -209,28 +209,30 @@
             cursor: pointer;
             background-color: green !important;
         }
-
+/*Add to Cart Hover Styling  */
         .add-to-cart:hover {
     background-color: #003300 !important; /* Darker green on hover */
 }
+
+/*         User Icon Styling */
         .UserICON{
             margin-left: 200px;
         }
-
+/*Cart Icon Styling  */
         .CART{
             margin-left : 305px;
             margin-top : 8px;
         }
-
+/*Search Input Icon  */
         #input{
             width : 650px;
         }
-
+/*Home Option  */
         #homee{
             margin-left: 95px;
             margin-top : 8px;
         }
-
+/*Category Option  */
         #Category{
 
             margin-left : 280px;
