@@ -535,6 +535,8 @@ while ($fetch = mysqli_fetch_assoc($result2)) {
     ?>
 
     <tr>
+
+<!--         Products Details Fetch and Display -->
         <td><?php echo $fetch['id'] ?></td>
         <td><img src="<?php echo $fetch['image'] ?>" width="100px" alt=""></td>
         <td><?php echo $fetch['name'] ?></td>
