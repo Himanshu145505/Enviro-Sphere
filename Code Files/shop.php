@@ -239,7 +239,7 @@
             margin-top: 9px
 
         }
-
+/*Awareness Option Styling  */
         #Awareness{
             margin-top: -22px;
             left : 5%;
@@ -268,13 +268,13 @@
     font-size: 30px;
     left: -35px;
 }
-
+/*Move Next  */
 .slick-next {
     top: 55%;
     transform: translateY(50%);
     font-size: 30px;
 }
-
+/*Home, Category and Awareness Anchor Styling  */
 #homee a,
 #Category a,
 #Awareness a {
@@ -287,7 +287,7 @@
     transform: scale(1.1); /* Scale the item slightly on hover */
     transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
 }
-
+/*Search Bar Place Holder  */
 #input::placeholder {
     font-size: 15px; /* Adjust the font size as needed */
 }
