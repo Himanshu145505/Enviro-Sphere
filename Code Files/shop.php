@@ -175,7 +175,7 @@
     transform: scale(1.1);
 }
 
-/*  */
+/* Product Button Styling */
         .product button {
             margin-top: 10px;
             padding: 5px 10px;
@@ -185,11 +185,11 @@
             color: white;
             cursor: pointer;
         }
-
+/*Product Button Hover Effects  */
         .product button:hover {
             background-color: #0056b3;
         }
-
+/*Product Info Styling  */
         .product-info {
             text-align: center;
             position: relative;
