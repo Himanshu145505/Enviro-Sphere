@@ -563,6 +563,7 @@ while ($fetch = mysqli_fetch_assoc($result2)) {
 
         <!-- Place Order Button -->
         <form action="checkout.php" method="post">
+<!--             Check out Button -->
             <button type="submit" name="place_order" class="btn btn-primary">Checkout</button>
         </form>
     </div>
@@ -570,7 +571,7 @@ while ($fetch = mysqli_fetch_assoc($result2)) {
 
 
 
-
+<!--Imp Imports  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 
