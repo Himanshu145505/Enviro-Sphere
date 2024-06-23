@@ -117,8 +117,8 @@
         }
 
 
-//Start From Here 
 
+/*Responsive Design for Mid Screens  */
         @media(max-width: 732px)
         {
             #containerSlider img
@@ -126,6 +126,8 @@
                 height: 12em;
             }
         }
+
+/*         Responsive Design for Small Screens */
         @media(max-width: 500px)
         {
             #containerSlider img
