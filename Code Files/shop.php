@@ -115,6 +115,10 @@
             text-align: center;
             align-content: center;
         }
+
+
+//Start From Here 
+
         @media(max-width: 732px)
         {
             #containerSlider img
