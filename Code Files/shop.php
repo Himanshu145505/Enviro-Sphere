@@ -576,7 +576,7 @@ while ($fetch = mysqli_fetch_assoc($result2)) {
 
 
 
-
+<!--Function for Dots SlideShop New Slide each second (repeat)  -->
 <script>
 $(document).ready(function() {
         $('#containerSlider').slick({
@@ -589,6 +589,7 @@ $(document).ready(function() {
         });
     });
 
+    // Dark Mode Light Mode 
 document.getElementById("mode-toggle").addEventListener("click", function() {
     var body = document.body;
     var currentMode = body.classList.contains("light-mode") ? "light" : "dark";
@@ -599,6 +600,8 @@ document.getElementById("mode-toggle").addEventListener("click", function() {
         body.style.backgroundColor = "white";
         body.style.color = "black";
         document.getElementById("mode-icon").src = "Cont/night-mode.png"; // Update path to moon icon
+
+        
     } else {
         body.style.backgroundColor = "black";
         body.style.color = "white";
@@ -606,10 +609,12 @@ document.getElementById("mode-toggle").addEventListener("click", function() {
     }
 });
 
+    // Mouse Enter Category 
 document.getElementById("Category").addEventListener("mouseenter", function() {
     this.classList.add("dropdown-active");
 });
 
+    // Mouse Leave Category
 document.getElementById("Category").addEventListener("mouseleave", function() {
     this.classList.remove("dropdown-active");
 });
@@ -617,7 +622,7 @@ document.getElementById("Category").addEventListener("mouseleave", function() {
 
 
 
-
+// Total Amount Update Function (Each Time User Add)
 function updateTotal() {
     var totalAmount = 0;
     var quantityInputs = document.getElementsByName("quantity");
