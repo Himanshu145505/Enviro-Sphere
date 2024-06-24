@@ -86,7 +86,9 @@
             </tr>
 
             <?php
+// Connection Details
             $conn = mysqli_connect("127.0.0.1:3308", "root", "", "envirosphere");
+// Fetching the Uploaded Images from Database and Displaying them
             $sql2 = "SELECT * FROM `images` WHERE 1";
             $result2 = mysqli_query($conn, $sql2);
             while($fetch = mysqli_fetch_assoc($result2))
@@ -94,8 +96,10 @@
             ?>
 
             <tr>
+<!--                 Image Display In tabular Format -->
                 <td><?php echo $fetch['id'] ?></td>
                 <td><img src="./image/<?php echo $fetch['image'] ?>" width=100px alt=""></td>
+<!--                 Delete Button for Deleting the Uploaded Image from the Database -->
                 <td><a href="delete.php?id=<?php echo $fetch['id'] ?>" class="btn btn-outline-danger">Delete</a></td>
             </tr>
 
