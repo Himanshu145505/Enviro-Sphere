@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--     BootStrap Upload Styling Imports -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Upload Image</title>
 </head>
 <body>
 
     <div class="alert alert-secondary" role="alert">
+<!--         Upload Image Option -->
         <h4 class="text-center">Upload Image</h4>
     </div>
     <div class="container col-12 m-5">
        <div class="col-6 m-auto">
 
+           
         <?php
         if(isset($_POST['btn_img']))
         {
+            // Connection Details
             $con = mysqli_connect("127.0.0.1:3308", "root", "", "envirosphere");
 
+            // Choose File Option
             $filename = $_FILES["choosefile"]["name"];
             $tempfile = $_FILES["choosefile"]["tmp_name"];
             $folder = "image/".$filename;
@@ -29,6 +34,7 @@
             $description = $_POST['description'];
             $price = $_POST['price'];
 
+            // Insertion
             $sql = "INSERT INTO `images`(`image`, `name`, `description`, `price`) 
                     VALUES('$filename', '$name', '$description', '$price')";
             
