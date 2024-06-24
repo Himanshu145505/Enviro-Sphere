@@ -34,13 +34,14 @@
             $description = $_POST['description'];
             $price = $_POST['price'];
 
-            // Insertion
+            // Insertion into Imagaes Table
             $sql = "INSERT INTO `images`(`image`, `name`, `description`, `price`) 
                     VALUES('$filename', '$name', '$description', '$price')";
             
             if($filename == "")
             {
                 echo 
+                    // No file Selected Error Message
                 "
                 <div class='alert alert-danger' role='alert'>
                     <h4 class='text-center'>Blank not Allowed</h4>
@@ -49,6 +50,7 @@
             }
             else
             {
+                // Image Successfully Uploaded Display Message
                 $result = mysqli_query($con, $sql);
                 move_uploaded_file($tempfile, $folder);
                 echo 
@@ -62,6 +64,7 @@
 
         ?>
 
+<!--            Form  -->
         <form action="yt.php" method="post" class="form-control" enctype="multipart/form-data">
             <input type="file" class="form-control" name="choosefile"  id="">
             <input type="text" class="form-control" name="name" placeholder="Product Name">
@@ -74,6 +77,7 @@
             </div>
         </form>
 
+<!--          Details Display   -->
         <table class="table text-center">
             <tr>
                 <th>id</th>
