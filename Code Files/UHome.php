@@ -531,6 +531,7 @@ header a:hover {
 
 <!--Category Section -->
     <a href="#">Category</a>
+<!--Dropdown Options -->
     <div class="dropdown-content">
         <a href="#">Wall Hangings</a>
         <a href="#">Table Organizers</a>
