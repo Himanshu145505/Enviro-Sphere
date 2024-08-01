@@ -303,7 +303,7 @@ header a:hover {
 #input::placeholder {
     font-size: 15px; /* Adjust the font size as needed */
 }
-
+/* wall headings */
 .wall-heading{
     margin-left:30px;
     color:white;
