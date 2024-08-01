@@ -300,6 +300,7 @@ header a:hover {
     transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
 }
 
+/*Input PlaceHolder */
 #input::placeholder {
     font-size: 15px; /* Adjust the font size as needed */
 }
