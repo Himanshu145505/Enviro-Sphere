@@ -32,6 +32,7 @@ if ($result->num_rows > 0) {
 }
 
 // Check if "Security & Pass" is clicked
+// Data Display
 if (isset($_GET['section']) && $_GET['section'] == 'security-pass') {
     $data = "<table>";
     $data .= "<tr><th>Email</th><th>Password</th></tr>";
