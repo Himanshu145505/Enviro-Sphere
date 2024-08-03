@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             echo "<p id='redirect-text' style='text-align: center; color: green; font-size: 1.8em; background-color: yellow; '>Redirecting back to home page in <span id='countdown'>20</span> seconds</p>";
             echo "</div>";
-
+         // Order Detailing
             echo "<h2 style='text-align: center; color: #333; font-family: Arial, sans-serif;'>Personal Details</h2>";
             echo "<p style='text-align: center; color: #666; font-size: 1.2em;'>Order ID: $orderID</p>";
             echo "<p style='text-align: center; color: #666; font-size: 1.2em;'>Order Time & Date: $orderTime (IST)</p>";
