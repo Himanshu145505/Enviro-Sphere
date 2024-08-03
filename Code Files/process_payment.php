@@ -85,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 // If user has choosen the COD Payment method then after showing the details to user for 20 seconds it will redirect back to Home Page
         echo "<script>
+        // Countdown
              var seconds = 20;
              var countdown = document.getElementById('countdown');
              var redirectText = document.getElementById('redirect-text');
