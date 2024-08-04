@@ -1,6 +1,8 @@
 <?php
 // Database Details
+// Server Name
 $servername = "127.0.0.1:3308";
+// User Name Default
 $username = "root";
 $password = "";
 $dbname = "envirosphere";
