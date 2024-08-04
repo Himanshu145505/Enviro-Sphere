@@ -4,7 +4,9 @@
 $servername = "127.0.0.1:3308";
 // User Name Default
 $username = "root";
+// passwprd default
 $password = "";
+// Databse name in PHP my admin (Xampp)
 $dbname = "envirosphere";
 
 // Create connection
