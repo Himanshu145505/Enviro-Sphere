@@ -262,6 +262,7 @@ header a:hover{
     overflow: hidden;
     animation: showThumbnail .5s linear 1 forwards;
 }
+/* Slider Previous */
 .slider.prev .list .item img{
     z-index: 100;
 }
