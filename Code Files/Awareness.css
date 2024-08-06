@@ -257,6 +257,7 @@ header a:hover{
     }
 }
 
+/* Slider Next */
 .slider.next .thumbnail .item:nth-last-child(1){
     overflow: hidden;
     animation: showThumbnail .5s linear 1 forwards;
