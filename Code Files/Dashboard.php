@@ -18,7 +18,9 @@ if ($conn->connect_error) {
 $name = "";
 // email id
 $email = "";
+// password
 $password = "";
+// data
 $data = "";
 
 // Query to fetch name, email, and password from the database
