@@ -32,8 +32,9 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     // name
     $name = $row["name"];
-    email
+    // email
     $email = $row["email"];
+    // pass
     $password = $row["password"];
 }
 
