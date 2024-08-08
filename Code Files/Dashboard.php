@@ -30,7 +30,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Output data of the first row (assuming there's only one user for now)
     $row = $result->fetch_assoc();
+    // name
     $name = $row["name"];
+    email
     $email = $row["email"];
     $password = $row["password"];
 }
