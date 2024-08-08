@@ -14,7 +14,9 @@ if ($conn->connect_error) {
 }
 
 // Initialize variables
+// name data
 $name = "";
+// email id
 $email = "";
 $password = "";
 $data = "";
