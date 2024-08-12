@@ -92,6 +92,7 @@ header a:hover{
 
 /*Content Titles*/
 .slider .list .item .content .title,
+/*Content Type*/
 .slider .list .item .content .type{
     font-size: 5em;
     font-weight: bold;
