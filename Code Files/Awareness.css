@@ -325,6 +325,8 @@ header a:hover{
     opacity: 0;
     animation: showThumbnail .5s linear 1 forwards;
 }
+
+/*Slider Previous Button  */
 .slider.next .nextPrevArrows button,
 .slider.prev .nextPrevArrows button{
     pointer-events: none;
