@@ -284,6 +284,7 @@ header a:hover{
     animation: effectNext .5s linear 1 forwards;
 }
 
+/*Effect of Moving next  */
 @keyframes effectNext{
     from{
         transform: translateX(150px);
