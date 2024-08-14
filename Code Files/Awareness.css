@@ -204,7 +204,7 @@ header a:hover{
 .slider .list .item:nth-child(1) .content .type,
 /*Description  */
 .slider .list .item:nth-child(1) .content .description,
-Btn/*  */
+/* Button*/
 .slider .list .item:nth-child(1) .content .buttons
 
 /*Animations  */
@@ -214,6 +214,8 @@ Btn/*  */
     opacity: 0;
     animation: showContent .5s 1s linear 1 forwards;
 }
+
+/*Content Show  */
 @keyframes showContent{
     to{
         transform: translateY(0px);
