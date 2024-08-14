@@ -200,7 +200,9 @@ header a:hover{
 
 /* animation text in first item */
 .slider .list .item:nth-child(1) .content .title,
+/*Type  */
 .slider .list .item:nth-child(1) .content .type,
+/*DEs  */
 .slider .list .item:nth-child(1) .content .description,
 .slider .list .item:nth-child(1) .content .buttons
 
