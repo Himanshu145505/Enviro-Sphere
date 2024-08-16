@@ -56,8 +56,11 @@ if ($check_result->num_rows > 0) {
     // Redirection to Home Page
     echo "<script>
             document.addEventListener('DOMContentLoaded', function() {
+
+            
                 document.getElementById('popup-success').style.display = 'block';
                 setTimeout(function() {
+                // After Adding to Cart Redirect to Home Page
                     window.location.href = 'UHome.php';
                 }, 400);
             });
