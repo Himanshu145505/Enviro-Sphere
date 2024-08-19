@@ -6,6 +6,7 @@ $servername = "127.0.0.1:3308";
 $username = "root";
 // Password
 $password = "";
+// Database Name
 $dbname = "envirosphere";
 
 // Create connection
