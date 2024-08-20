@@ -180,6 +180,7 @@ transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale
 
 <!--                 Home Section and Category -->
                 <div id="homee"><a href="UHome.php">Home</a></div>
+<!--                 Category -->
                 <div id="Category">
     <div class="dropdown-content">
     </div>
@@ -217,7 +218,9 @@ if(isset($_POST['btn_upload']))
         {
             // File was uploaded successfully, continue with database insert
             // Additional details
+            // Material Name
             $materialname = $_POST['materialname'];
+            // Material ttype
             $type = $_POST['type'];
             $material_age = $_POST['material_age'];
             $material_Quality = $_POST['material_Quality'];
