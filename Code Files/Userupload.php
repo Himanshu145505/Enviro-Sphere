@@ -220,9 +220,11 @@ if(isset($_POST['btn_upload']))
             // Additional details
             // Material Name
             $materialname = $_POST['materialname'];
-            // Material ttype
+            // Material type
             $type = $_POST['type'];
+            // material age
             $material_age = $_POST['material_age'];
+            // material quality
             $material_Quality = $_POST['material_Quality'];
             $address = $_POST['address'];
             $state = $_POST['state'];
