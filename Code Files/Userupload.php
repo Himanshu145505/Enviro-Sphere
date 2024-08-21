@@ -232,7 +232,9 @@ if(isset($_POST['btn_upload']))
             $state = $_POST['state'];
             // City
             $city = $_POST['city'];
+            // Zip Code
             $ZIP_code = $_POST['ZIP_code'];
+            // Description
             $description = $_POST['description'];
 
 
