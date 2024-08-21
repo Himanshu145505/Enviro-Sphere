@@ -226,8 +226,11 @@ if(isset($_POST['btn_upload']))
             $material_age = $_POST['material_age'];
             // material quality
             $material_Quality = $_POST['material_Quality'];
+            // Address
             $address = $_POST['address'];
+            // State
             $state = $_POST['state'];
+            // City
             $city = $_POST['city'];
             $ZIP_code = $_POST['ZIP_code'];
             $description = $_POST['description'];
