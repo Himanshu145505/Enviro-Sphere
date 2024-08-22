@@ -4,7 +4,7 @@
 $servername = "127.0.0.1:3308";
 // User Name Default
 $username = "root";
-// passwprd default
+// password default
 $password = "";
 // Databse name in PHP my admin (Xampp)
 $dbname = "envirosphere";
@@ -19,8 +19,10 @@ if ($conn->connect_error) {
 
 // Check if the item is already in the cart
 $check_stmt = $conn->prepare("SELECT * FROM cart WHERE id = ?");
+// Id
 $check_stmt->bind_param("i", $id);
 $id = $_POST['id'];
+// Execute
 $check_stmt->execute();
 $check_result = $check_stmt->get_result();
 
