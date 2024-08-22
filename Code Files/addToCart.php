@@ -24,6 +24,7 @@ $check_stmt->bind_param("i", $id);
 $id = $_POST['id'];
 // Execute
 $check_stmt->execute();
+// Get Result
 $check_result = $check_stmt->get_result();
 
 
