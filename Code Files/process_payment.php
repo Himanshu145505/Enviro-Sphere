@@ -19,7 +19,12 @@ if ($conn->connect_error) {
 
 // Payment Process Customer details 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Details
+
+    // Full Name
     $fullName = $_POST["name"];
+
+    // address
     $address = $_POST["address"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
