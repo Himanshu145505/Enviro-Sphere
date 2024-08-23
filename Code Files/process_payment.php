@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Phone
     $phone = $_POST["phone"];
+    // Payment Method
     $paymentMethod = $_POST["payment-method"];
 
     // Generate a random order ID
