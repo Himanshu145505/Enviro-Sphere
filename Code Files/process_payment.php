@@ -26,7 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // address
     $address = $_POST["address"];
+
+    // Email
     $email = $_POST["email"];
+
+    // Phone
     $phone = $_POST["phone"];
     $paymentMethod = $_POST["payment-method"];
 
