@@ -14,6 +14,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
+    // When Connections Fails
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -61,8 +62,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "</div>";
          // Order Detailing
             echo "<h2 style='text-align: center; color: #333; font-family: Arial, sans-serif;'>Personal Details</h2>";
+            // Order ID
             echo "<p style='text-align: center; color: #666; font-size: 1.2em;'>Order ID: $orderID</p>";
+            // Order Time
             echo "<p style='text-align: center; color: #666; font-size: 1.2em;'>Order Time & Date: $orderTime (IST)</p>";
+            // Table Styling
             echo "<table style='width: 100%; border-collapse: collapse; margin-top: 20px;'>";
             echo "<tr><th style='border: 1px solid #ddd; padding: 10px; background-color: green; text-align: left;'>Description</th><th style='border: 1px solid #ddd; padding: 10px; background-color: green; text-align: left;'>Details</th></tr>";
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Full Name</td><td style='border: 1px solid #ddd; padding: 10px;'>$fullName</td></tr>";
