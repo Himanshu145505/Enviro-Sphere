@@ -72,6 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<tr><th style='border: 1px solid #ddd; padding: 10px; background-color: green; text-align: left;'>Description</th><th style='border: 1px solid #ddd; padding: 10px; background-color: green; text-align: left;'>Details</th></tr>";
             // Full Name
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Full Name</td><td style='border: 1px solid #ddd; padding: 10px;'>$fullName</td></tr>";
+            // Address
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Address</td><td style='border: 1px solid #ddd; padding: 10px;'>$address</td></tr>";
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Email</td><td style='border: 1px solid #ddd; padding: 10px;'>$email</td></tr>";
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Phone</td><td style='border: 1px solid #ddd; padding: 10px;'>$phone</td></tr>";
