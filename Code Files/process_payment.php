@@ -78,6 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Email</td><td style='border: 1px solid #ddd; padding: 10px;'>$email</td></tr>";
             // Phone
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Phone</td><td style='border: 1px solid #ddd; padding: 10px;'>$phone</td></tr>";
+            // Payment Method
             echo "<tr><td style='border: 1px solid #ddd; padding: 10px;'>Payment Method</td><td style='border: 1px solid #ddd; padding: 10px;'>$paymentMethod</td></tr>";
             echo "</table>";
 
