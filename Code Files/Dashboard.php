@@ -1,7 +1,10 @@
 <?php
 // Connection Details
+//Host
 $hostname = '127.0.0.1:3308';
+//UserName
 $username = 'root';
+//Passwor
 $password = '';
 $db_name = 'envirosphere';
 
