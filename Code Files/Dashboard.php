@@ -4,7 +4,7 @@
 $hostname = '127.0.0.1:3308';
 //UserName
 $username = 'root';
-//Passwor
+//Password
 $password = '';
 $db_name = 'envirosphere';
 
