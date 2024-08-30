@@ -29,6 +29,7 @@ $data = "";
 
 // Query to fetch name, email, and password from the database
 $sql = "SELECT name, email, password FROM users";
+//Query Result (it is successfully executed or not) 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
