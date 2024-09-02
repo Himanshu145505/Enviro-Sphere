@@ -121,7 +121,7 @@
 
 
 
-/*Responsive Design for Mid Screens  */
+/*Responsive Design for Mid Screens max width 732px */
         @media(max-width: 732px)
         {
             #containerSlider img
@@ -130,7 +130,7 @@
             }
         }
 
-/*         Responsive Design for Small Screens */
+/*         Responsive Design for Small Screens max width 500px*/
         @media(max-width: 500px)
         {
             #containerSlider img
