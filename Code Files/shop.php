@@ -539,10 +539,14 @@ while ($fetch = mysqli_fetch_assoc($result2)) {
 
     <tr>
 
-<!--         Products Details Fetch and Display -->
+<!--   Products Details Fetch and Display -->
+        <!--Product Id-->
         <td><?php echo $fetch['id'] ?></td>
+        <!--Product Image-->
         <td><img src="<?php echo $fetch['image'] ?>" width="100px" alt=""></td>
+        <!--Product Name-->
         <td><?php echo $fetch['name'] ?></td>
+        <!--Product Description-->
         <td><?php echo $fetch['description'] ?></td>
         <td>Rs. <?php echo $fetch['price'] ?></td>
         <td><input type="number" name="quantity" value="<?php echo $fetch['quantity'] ?>" onchange="updateTotal()"></td>
