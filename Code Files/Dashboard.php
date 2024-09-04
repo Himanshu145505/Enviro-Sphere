@@ -14,6 +14,7 @@ $conn = new mysqli($hostname, $username, $password, $db_name);
 
 // Check connection
 if ($conn->connect_error) {
+    //Message for Connection Failed 
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -49,6 +50,7 @@ if (isset($_GET['section']) && $_GET['section'] == 'security-pass') {
     //Fetching the Details for Displaying in Table
     $data = "<table>";
     $data .= "<tr><th>Email</th><th>Password</th></tr>";
+    //Email and Password Representation in Tabular Format
     $data .= "<tr><td>".$email."</td><td>".$password."</td></tr>";
     $data .= "</table>";
 }
