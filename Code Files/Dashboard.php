@@ -189,6 +189,7 @@ $conn->close();
 
         <!-- Display the welcome message and data -->
         <div class="main" id="data">
+            <!--Welcome message with user name-->
             <?php echo $data; ?>
         </div>
     </div>
