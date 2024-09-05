@@ -49,6 +49,7 @@ if ($result->num_rows > 0) {
 if (isset($_GET['section']) && $_GET['section'] == 'security-pass') {
     //Fetching the Details for Displaying in Table
     $data = "<table>";
+    //Email
     $data .= "<tr><th>Email</th><th>Password</th></tr>";
     //Email and Password Representation in Tabular Format
     $data .= "<tr><td>".$email."</td><td>".$password."</td></tr>";
@@ -59,6 +60,7 @@ if (isset($_GET['section']) && $_GET['section'] == 'security-pass') {
 if (isset($_GET['section']) && $_GET['section'] == 'orders') {
     // Query to fetch cart details
     $cart_sql = "SELECT * FROM cart_details";
+    //Cart Result
     $cart_result = $conn->query($cart_sql);
 
     if ($cart_result->num_rows > 0) {
@@ -67,6 +69,7 @@ if (isset($_GET['section']) && $_GET['section'] == 'orders') {
         //Product Details Display
         $data .= "<tr><th>Product ID</th><th>Name</th><th>Description</th><th>Price</th><th>Quantity</th><th>Total Price</th></tr>";
         while($cart_row = $cart_result->fetch_assoc()) {
+            //Product ID
             $data .= "<tr><td>".$cart_row["product_id"]."</td><td>".$cart_row["name"]."</td><td>".$cart_row["description"]."</td><td>".$cart_row["price"]."</td><td>".$cart_row["quantity"]."</td><td>".$cart_row["total_price"]."</td></tr>";
         }
         $data .= "</table>";
