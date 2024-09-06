@@ -183,6 +183,7 @@ $conn->close();
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
+                        <!--Sequrity and Pass-->
                         <span class="title">Security & Pass</span>
                     </a>
                 </li>
