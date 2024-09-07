@@ -91,6 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // This Query will fetch the items from the cart
             $cart_sql = "SELECT * FROM cart_details";
+            //Cart Query Result
             $cart_result = $conn->query($cart_sql);
             if ($cart_result->num_rows > 0) {
                 echo "<table style='width: 100%; border-collapse: collapse; margin-top: 20px;'>";
@@ -103,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<tr><td colspan='5' style='text-align: right; padding-right: 10px;'>Total Amount:</td><td style='border: 1px solid #ddd; padding: 10px;'>$totalAmount</td></tr>";
                 echo "</table>";
             } else {
-                // If there are no items in the cart then it will show an error message
+                // If there are no items in the cart then it will show a message 
                 echo "No items in the cart.";
             }
         }
@@ -115,6 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              var redirectText = document.getElementById('redirect-text');
              var interval = setInterval(function() {
                  seconds--;
+                 //CountDown Text Show
                  countdown.textContent = seconds;
                  if (seconds <= 0) {
                      clearInterval(interval);
