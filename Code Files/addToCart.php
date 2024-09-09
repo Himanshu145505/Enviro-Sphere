@@ -34,6 +34,7 @@ if ($check_result->num_rows > 0) {
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('popup').style.display = 'block';
                 setTimeout(function() {
+                //Redirection to Home Page
                     window.location.href = 'UHome.php'; 
                 }, 400); 
             });
@@ -44,6 +45,7 @@ if ($check_result->num_rows > 0) {
     if (!$stmt) {
         die("Error preparing statement: " . $conn->error);
     }
+    //Attributes of Product Card
     $stmt->bind_param("issss", $id, $name, $description, $price, $image);
 
     // Set parameters and execute
