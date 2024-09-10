@@ -115,7 +115,7 @@
             align-content: center;
         }
 
-/*         Responsive Styling */
+/*         Responsive Styling for mid size*/
         @media(max-width: 732px)
         {
             #containerSlider img
@@ -123,6 +123,8 @@
                 height: 12em;
             }
         }
+
+        /*Responsive Design for Small Screen Sizes*/
         @media(max-width: 500px)
         {
             #containerSlider img
@@ -210,6 +212,7 @@
         .add-to-cart:hover {
     background-color: #003300 !important; /* Darker green on hover */
 }
+        /*User ICON*/
         .UserICON{
             margin-left: 200px;
         }
