@@ -9,6 +9,8 @@ $password = '';
 //Database Name
 $db_name = 'envirosphere';
 
+//Modification to be start from today
+
 // Create connection
 $conn = new mysqli($hostname, $username, $password, $db_name);
 
