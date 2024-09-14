@@ -133,11 +133,7 @@ header a:hover {
             width: 255px;
             height: 332px;
             margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor:pointer;
+         
             background-color: #186F65;
             margin-bottom : 50px;
             
