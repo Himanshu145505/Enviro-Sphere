@@ -78,6 +78,45 @@ function signupFormValidate() {
 }
 // Validation Form
 
+function signinFormValidate() {
+    // Variables Declare
+    var email = document.getElementById("Email1");
+    var password = document.getElementById("Password1");
+    var isSubmit = true;
+
+    document.getElementById("emailerrorone").innerHTML = "";
+    document.getElementById("passerrorone").innerHTML = "";
+
+    email.classList.remove("error11");
+    password.classList.remove("error11");
+
+    // IF Email is empty
+
+    if (email.value == "") {
+        document.getElementById("emailerrorone").innerHTML = "This field cannot be empty";
+        email.classList.add("error11");
+        isSubmit = false;
+    }  
+        // If email format is not correct
+    else {
+        if (!email.value.includes("@") && isNaN(email.value)) {
+            document.getElementById("emailerrorone").innerHTML = "Invalid email or Phone";
+            email.classList.add("error11");
+            isSubmit = false;
+        }
+    }
+
+    // if password is empty
+
+    if (password.value == "") {
+        document.getElementById("passerrorone").innerHTML = "Password cannot be empty";
+        password.classList.add("error11");
+        isSubmit = false;
+    }
+
+    return isSubmit;
+}
+
 // Submit Button Sign In Check
 
 document.getElementById("SignInFo").addEventListener("submit", function(event) {
