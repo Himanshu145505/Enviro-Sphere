@@ -4,43 +4,7 @@
     <title>UPI Payment</title>
     <style>
 
-/*         Background Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-/*         UPI QR Container */
-        .container {
-            max-width: 400px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: center;
-        }
-/*         Heading 1 (UPI) */
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
 
-/*         QR code Positioning */
-        .qr-code {
-            margin-bottom: 20px;
-        }
-
-/*         QR image styling */
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
 /*         other stylings */
         p {
             color: #666;
