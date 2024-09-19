@@ -52,42 +52,6 @@ header a:hover{
 }
 
 
-/* slider section  */
-
-.slider{
-    height: 100vh;
-    margin-top: -50px;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-}
-/*Slider Compositions  */
-.slider .list .item{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0 0 0 0;
-}
-/*image compositions of slider  */
-.slider .list .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-/*Sliding effect and content change transition  */
-.slider .list .item .content{
-    position: absolute;
-    top: 20%;
-    width: 1140px;
-    max-width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 30%;
-    box-sizing: border-box;
-    color: #fff;
-    text-shadow: 0 5px 10px #0004;
-}
-
 /*content styling  */
 
 /*Content Titles*/
