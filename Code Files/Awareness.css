@@ -84,17 +84,6 @@ header a:hover{
     transition: 0.4s;
     letter-spacing: 2px;
 }
-/* button hover effect */
-
-.slider .list .item .button button:hover{
-    letter-spacing: 3px;
-}
-
-.slider .list .item .button button:nth-child(2){
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #eee;
-}
 
 /* Thumbnail Section */
 .thumbnail{
@@ -154,6 +143,18 @@ header a:hover{
 .nextPrevArrows button:hover{
     background-color: #fff;
     color: #000;
+}
+
+/* button hover effect */
+
+.slider .list .item .button button:hover{
+    letter-spacing: 3px;
+}
+
+.slider .list .item .button button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
 }
 
 /* Slide change Animation Part */
