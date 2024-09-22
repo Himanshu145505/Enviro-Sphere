@@ -212,56 +212,7 @@ color:white;
 }
 
 
-/* Light mode styles */
-.light-mode .add-to-cart {
-color: black; /* Change the color for light mode */
-}
 
-/* Dark mode styles */
-.dark-mode .add-to-cart {
-color: white; /* Change the color for dark mode */
-}
-
-/* Increase the size of next and previous buttons */
-/* Increase the size of next and previous buttons */
-.slick-prev::before,
-.slick-next::before {
-font-size: 30px !important; /* Adjust the font size as needed */
-}
-
-/* Change color of inactive dots to black in light mode */
-.light-mode .slick-dots li button:before {
-color: black;
-}
-
-/* Change color of active dot to green in light mode */
-.light-mode .slick-dots li.slick-active button:before {
-color: green;
-}
-
-
-
-/* Styles for the mode toggle button */
-#mode-toggle {
-background: none;
-border: none;
-cursor: pointer;
-}
-
-/*Dark and Light Mode icon Styling  */
-
-#mode-icon {
-width: 24px; /* Adjust the width and height as needed */
-height: 24px;
-}
-
-#mode-toggle {
-position: fixed; /* Fixed position */
-top: 26px; /* Distance from the top of the viewport */
-right: 14px; /* Distance from the right of the viewport */
-z-index: 1000; /* Ensure it's above other elements */
-
-}
 
 /* Change color of previous and next buttons in light mode */
 .light-mode .slick-prev::before,
