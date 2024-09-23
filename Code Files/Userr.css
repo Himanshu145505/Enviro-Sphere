@@ -174,7 +174,6 @@ object-fit: cover;
     left: 400px;
   }
 
-
 /* Signup */
 
 .SignupBar {
@@ -260,6 +259,52 @@ object-fit: cover;
     font-size: 18px;
     border-radius: 5px;
     color: white;
+}
+
+/*   Slider Styling */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+  }
+/*   Slider Before Styling */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+/*Slider off position , color and other stylings  */
+  
+  .slider.on {
+    background-color: #186F65;
+  }
+  
+  .slider.on:before {
+    transform: translateX(20px);
+  }
+  
+  .slider.off:before {
+    transform: translateX(0);
+  }
+  
+  .slider input {
+    display: none;
+  }
+  body {
+    transition: background-color 0.5s ease;
 }
 
 /*Sign up bar positioning  */
