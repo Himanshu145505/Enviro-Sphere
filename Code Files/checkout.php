@@ -13,6 +13,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+    // Product id Fetching
+    while ($row = $cart_items_result->fetch_assoc()) {
+        $product_id = $row['id'];
+        $name = $row['name'];
+        $description = $row['description'];
+        $price = $row['price'];
+        $quantity = 1; // Assuming quantity is always 1 for now
+        $total_price = $price * $quantity;
+
+
 // Fetch cart items from cart table
 $cart_items_sql = "SELECT * FROM cart";
 $cart_items_result = $conn->query($cart_items_sql);
@@ -33,6 +43,8 @@ if ($cart_items_result->num_rows > 0) {
     if ($conn->query($clear_cart_sql) !== TRUE) {
         echo "Error clearing cart: " . $conn->error;
     }
+
+
 
 
     // Redirection after Successful Checkout
