@@ -20,14 +20,6 @@ $cart_items_result = $conn->query($cart_items_sql);
 if ($cart_items_result->num_rows > 0) {
     // Loop through each cart item and insert into cart_details table
 
-    // Product id Fetching
-    while ($row = $cart_items_result->fetch_assoc()) {
-        $product_id = $row['id'];
-        $name = $row['name'];
-        $description = $row['description'];
-        $price = $row['price'];
-        $quantity = 1; // Assuming quantity is always 1 for now
-        $total_price = $price * $quantity;
 
         // Insert into cart_details table
         $insert_sql = "INSERT INTO cart_details (product_id, name, description, price, quantity, total_price) VALUES ('$product_id', '$name', '$description', '$price', '$quantity', '$total_price')";
