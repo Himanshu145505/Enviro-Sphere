@@ -496,6 +496,21 @@ header a:hover {
     }
 }
 
+/*         Styling for Responsiveness */
+        @media(max-width: 732px)
+        {
+            #containerSlider img
+            {
+                height: 12em;
+            }
+        }
+        @media(max-width: 500px)
+        {
+            #containerSlider img
+            {
+                height: 10em;
+            }
+        }
 
 
 
