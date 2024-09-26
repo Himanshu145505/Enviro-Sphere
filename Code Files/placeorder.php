@@ -35,10 +35,29 @@ if ($conn->connect_error) {
     // It will completely clear the table name cart items after transfering all the data from the cart items to order table
     unset($_SESSION['cart']);
 
+// Check if the "Place Order" button is clicked
+if (isset($_POST['place_order'])) {
+    // Get the current date and time
+    $date_added = date('Y-m-d H:i:s');
+
+    // Get the cart items from the session
+    $cart_items = $_SESSION['cart'];
+
+    // Loop through each cart item and insert into the "orders" table
+    // It will fetch the item details from cart items
+    foreach ($cart_items as $item) {
+        $name = $item['name'];
+        $description = $item['description'];
+        $price = $item['price'];
+        $image = $item['image'];
+
+
     // Redirect to a confirmation page or display a success message
     // After placing order the user will be redirected to the billing page
     header("Location: billing.php");
     exit();
+
+
 }
 
 $conn->close();
