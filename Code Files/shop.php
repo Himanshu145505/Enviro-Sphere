@@ -264,64 +264,6 @@
 }
 
 
-/* Move next and previous buttons down */
-.slick-prev{
-    top: 55%;
-    transform: translateY(50%);
-    font-size: 30px;
-    left: -35px;
-}
-/*Move Next  */
-.slick-next {
-    top: 55%;
-    transform: translateY(50%);
-    font-size: 30px;
-}
-/*Home, Category and Awareness Anchor Styling  */
-#homee a,
-#Category a,
-#Awareness a {
-    font-size: 17px; /* Change the value as needed */
-}
-
-/* Unique hover effect for navbar list items */
-#container a:hover {
-    color: #004d00; /* Change text color to green */
-    transform: scale(1.1); /* Scale the item slightly on hover */
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
-}
-/*Search Bar Place Holder  */
-#input::placeholder {
-    font-size: 15px; /* Adjust the font size as needed */
-}
-/*Wall Heading Styling  */
-.wall-heading{
-    margin-left:30px;
-    color:white;
-}
-
-
-/* Light mode styles */
-.light-mode .add-to-cart {
-    color: black; /* Change the color for light mode */
-}
-
-/* Dark mode styles */
-.dark-mode .add-to-cart {
-    color: white; /* Change the color for dark mode */
-}
-
-/* Increase the size of next and previous buttons */
-/* Increase the size of next and previous buttons */
-.slick-prev::before,
-.slick-next::before {
-    font-size: 30px !important; /* Adjust the font size as needed */
-}
-
-/* Change color of inactive dots to black in light mode */
-.light-mode .slick-dots li button:before {
-    color: black;
-}
 
 /* Change color of active dot to green in light mode */
 .light-mode .slick-dots li.slick-active button:before {
@@ -581,7 +523,64 @@ while ($fetch = mysqli_fetch_assoc($result2)) {
 <!--Imp Imports  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
+/* Move next and previous buttons down */
+.slick-prev{
+    top: 55%;
+    transform: translateY(50%);
+    font-size: 30px;
+    left: -35px;
+}
+/*Move Next  */
+.slick-next {
+    top: 55%;
+    transform: translateY(50%);
+    font-size: 30px;
+}
+/*Home, Category and Awareness Anchor Styling  */
+#homee a,
+#Category a,
+#Awareness a {
+    font-size: 17px; /* Change the value as needed */
+}
 
+/* Unique hover effect for navbar list items */
+#container a:hover {
+    color: #004d00; /* Change text color to green */
+    transform: scale(1.1); /* Scale the item slightly on hover */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+}
+/*Search Bar Place Holder  */
+#input::placeholder {
+    font-size: 15px; /* Adjust the font size as needed */
+}
+/*Wall Heading Styling  */
+.wall-heading{
+    margin-left:30px;
+    color:white;
+}
+
+
+/* Light mode styles */
+.light-mode .add-to-cart {
+    color: black; /* Change the color for light mode */
+}
+
+/* Dark mode styles */
+.dark-mode .add-to-cart {
+    color: white; /* Change the color for dark mode */
+}
+
+/* Increase the size of next and previous buttons */
+/* Increase the size of next and previous buttons */
+.slick-prev::before,
+.slick-next::before {
+    font-size: 30px !important; /* Adjust the font size as needed */
+}
+
+/* Change color of inactive dots to black in light mode */
+.light-mode .slick-dots li button:before {
+    color: black;
+}
 
 <!--Function for Dots SlideShop New Slide each second (repeat)  -->
 <script>
