@@ -184,16 +184,7 @@ body
     {
         font-size: 12px;
     }
-    .userIcon
-    {
-        font-size: 35px;
-    }
-    .addedToCart
-    {
-        font-size: 1.2em;
-        margin: 10px 20px;
-    }
-}
+
 
 /* For Small - Mid size displays */
 @media(max-width: 650px)
