@@ -125,6 +125,17 @@ body
 {
     color: rgb(29, 29, 29)
 }
+    .userIcon
+    {
+        font-size: 35px;
+    }
+    .addedToCart
+    {
+        font-size: 1.2em;
+        margin: 10px 20px;
+    }
+}
+
 
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
