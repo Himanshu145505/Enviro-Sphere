@@ -137,12 +137,14 @@ $conn->close();
 
 
                 <li>
-<!--                     Redirection to Home Page -->
+
+                </li>
+
+    <!--                     Redirection to Home Page -->
                     <a href="UHome.php" style="text-decoration: none;">
                         <!--Welcome Message-->
                         <div class="welcome-message"></div>
                     </a>
-                </li>
 <!-- Redirection to Home Page  -->
                 <li>
                     <a href="UHome.php" style="text-decoration: none;">
