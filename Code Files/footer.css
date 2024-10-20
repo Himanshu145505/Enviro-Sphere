@@ -102,17 +102,7 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         padding: 15px 50px;
     }
 }
-/*Responsive 850px  */
-@media(max-width: 850px)
-{
-    #containerFooter
-    {
-        font-size: 13px;
-    }
-    #webFooter
-    {
-        font-size: 10px;
-    }
+
 }
 /*Responsive 750px Small Mid  */
 @media(max-width: 750px)
